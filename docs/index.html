@@ -1,0 +1,668 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>C++ Mastery — Professional C++ Curriculum</title>
+
+  <!-- Open Graph / LinkedIn -->
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="C++ Mastery — Professional C++ Curriculum">
+  <meta property="og:description" content="🚧 DRAFT — 11 modules, 72 source files, 20K+ lines of bilingual (EN/TR) C++17/C++20 code. From basics to advanced: smart pointers, concurrency, templates, RAII, move semantics, concepts & more.">
+  <meta property="og:url" content="https://nimbustan.github.io/cpp_mastery/">
+  <meta property="og:image" content="https://nimbustan.github.io/cpp_mastery/cover.png">
+  <meta property="og:image:width" content="800">
+  <meta property="og:image:height" content="1131">
+  <meta property="og:site_name" content="C++ Mastery">
+
+  <!-- Twitter Card -->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="C++ Mastery — Professional C++ Curriculum">
+  <meta name="twitter:description" content="🚧 DRAFT — 11 modules, 72 source files, 20K+ lines of bilingual C++17/C++20 code.">
+  <meta name="twitter:image" content="https://nimbustan.github.io/cpp_mastery/cover.png">
+
+  <meta name="description" content="Open-source C++ curriculum: 11 modules, 72 files, 346 pages. Bilingual EN/TR. Apache 2.0 + CC BY-NC-SA 4.0.">
+  <style>
+    :root {
+      --bg: #0d1117;
+      --card: #161b22;
+      --border: #30363d;
+      --text: #e6edf3;
+      --muted: #8b949e;
+      --accent: #58a6ff;
+      --accent2: #3fb950;
+      --orange: #d29922;
+      --red: #f85149;
+    }
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif;
+      background: var(--bg);
+      color: var(--text);
+      line-height: 1.6;
+    }
+
+    /* Hero */
+    .hero {
+      text-align: center;
+      padding: 80px 20px 50px;
+      background: linear-gradient(135deg, #0d1117 0%, #161b22 50%, #1a1f2b 100%);
+      border-bottom: 1px solid var(--border);
+    }
+    .hero-content {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 60px;
+      max-width: 1000px;
+      margin: 0 auto;
+      flex-wrap: wrap;
+    }
+    .hero-text {
+      flex: 1;
+      min-width: 300px;
+      text-align: left;
+    }
+    .hero-cover {
+      flex-shrink: 0;
+    }
+    .hero-cover img {
+      width: 280px;
+      border-radius: 8px;
+      box-shadow: 0 20px 60px rgba(0,0,0,0.5), 0 0 30px rgba(88,166,255,0.1);
+      transition: transform 0.3s, box-shadow 0.3s;
+    }
+    .hero-cover img:hover {
+      transform: translateY(-4px) scale(1.02);
+      box-shadow: 0 30px 80px rgba(0,0,0,0.6), 0 0 40px rgba(88,166,255,0.2);
+    }
+    @media (max-width: 768px) {
+      .hero-content { flex-direction: column-reverse; gap: 30px; }
+      .hero-text { text-align: center; }
+      .hero-cover img { width: 220px; }
+      .badge-row { justify-content: center; }
+      .cta-row { justify-content: center; }
+      .hero .subtitle { margin: 0 auto 30px; }
+    }
+    .hero h1 {
+      font-size: 3rem;
+      font-weight: 800;
+      margin-bottom: 12px;
+      background: linear-gradient(135deg, var(--accent), var(--accent2));
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+    }
+    .hero .subtitle {
+      font-size: 1.25rem;
+      color: var(--muted);
+      max-width: 600px;
+      margin: 0 0 30px;
+    }
+    .badge-row {
+      display: flex;
+      justify-content: flex-start;
+      gap: 10px;
+      flex-wrap: wrap;
+      margin-bottom: 30px;
+    }
+    .badge {
+      display: inline-block;
+      padding: 4px 12px;
+      border-radius: 20px;
+      font-size: 0.8rem;
+      font-weight: 600;
+      border: 1px solid var(--border);
+    }
+    .badge.cpp17 { color: var(--accent); border-color: var(--accent); }
+    .badge.cpp20 { color: var(--accent2); border-color: var(--accent2); }
+    .badge.draft { color: var(--orange); border-color: var(--orange); }
+    .badge.bilingual { color: #bc8cff; border-color: #bc8cff; }
+
+    /* CTA Buttons */
+    .cta-row {
+      display: flex;
+      justify-content: flex-start;
+      gap: 16px;
+      flex-wrap: wrap;
+    }
+    .btn {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      padding: 12px 28px;
+      border-radius: 8px;
+      font-size: 1rem;
+      font-weight: 600;
+      text-decoration: none;
+      transition: all 0.2s;
+    }
+    .btn-primary {
+      background: var(--accent);
+      color: #fff;
+    }
+    .btn-primary:hover { background: #4090e0; }
+    .btn-secondary {
+      background: transparent;
+      color: var(--text);
+      border: 1px solid var(--border);
+    }
+    .btn-secondary:hover { border-color: var(--accent); color: var(--accent); }
+
+    /* Stats */
+    .stats {
+      display: flex;
+      justify-content: center;
+      gap: 40px;
+      flex-wrap: wrap;
+      padding: 40px 20px;
+      max-width: 800px;
+      margin: 0 auto;
+    }
+    .stat {
+      text-align: center;
+    }
+    .stat .number {
+      font-size: 2.2rem;
+      font-weight: 800;
+      color: var(--accent);
+    }
+    .stat .label {
+      font-size: 0.85rem;
+      color: var(--muted);
+      text-transform: uppercase;
+      letter-spacing: 1px;
+    }
+
+    /* Modules */
+    .section {
+      max-width: 900px;
+      margin: 0 auto;
+      padding: 40px 20px;
+    }
+    .section h2 {
+      font-size: 1.5rem;
+      margin-bottom: 24px;
+      color: var(--text);
+    }
+    .module-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
+      gap: 12px;
+    }
+    .module-card {
+      background: var(--card);
+      border: 1px solid var(--border);
+      border-radius: 8px;
+      overflow: hidden;
+      transition: border-color 0.2s;
+    }
+    .module-card:hover { border-color: var(--accent); }
+    .module-card .card-header {
+      padding: 16px;
+      cursor: pointer;
+      display: flex;
+      justify-content: space-between;
+      align-items: flex-start;
+      user-select: none;
+    }
+    .module-card .card-header:hover { background: rgba(88,166,255,0.04); }
+    .module-card .chevron {
+      font-size: 0.8rem;
+      color: var(--muted);
+      transition: transform 0.25s;
+      flex-shrink: 0;
+      margin-top: 2px;
+    }
+    .module-card.open .chevron { transform: rotate(180deg); }
+    .module-card .num {
+      font-size: 0.75rem;
+      color: var(--muted);
+      text-transform: uppercase;
+      letter-spacing: 1px;
+    }
+    .module-card .title {
+      font-weight: 600;
+      margin: 4px 0;
+    }
+    .module-card .meta {
+      font-size: 0.8rem;
+      color: var(--muted);
+    }
+    .module-card .std {
+      display: inline-block;
+      padding: 1px 6px;
+      border-radius: 4px;
+      font-size: 0.7rem;
+      font-weight: 600;
+    }
+    .module-card .std.c17 { background: rgba(88,166,255,0.15); color: var(--accent); }
+    .module-card .std.c20 { background: rgba(63,185,80,0.15); color: var(--accent2); }
+    .module-card .file-list {
+      max-height: 0;
+      overflow: hidden;
+      transition: max-height 0.35s ease;
+      border-top: 1px solid transparent;
+    }
+    .module-card.open .file-list {
+      max-height: 600px;
+      border-top-color: var(--border);
+    }
+    .file-list ul {
+      list-style: none;
+      padding: 8px 16px 12px;
+      margin: 0;
+    }
+    .file-list li {
+      padding: 4px 0;
+      font-size: 0.8rem;
+    }
+    .file-list li a {
+      color: var(--muted);
+      text-decoration: none;
+      font-family: 'SFMono-Regular', Consolas, 'Liberation Mono', Menlo, monospace;
+      font-size: 0.75rem;
+      transition: color 0.15s;
+    }
+    .file-list li a:hover { color: var(--accent); }
+    .file-list li a::before {
+      content: '📄 ';
+      font-size: 0.7rem;
+    }
+    .file-list .gh-link {
+      display: inline-flex;
+      align-items: center;
+      gap: 4px;
+      margin: 6px 16px 12px;
+      font-size: 0.75rem;
+      color: var(--accent);
+      text-decoration: none;
+      opacity: 0.8;
+      transition: opacity 0.15s;
+    }
+    .file-list .gh-link:hover { opacity: 1; text-decoration: underline; }
+
+    /* License */
+    .license-section {
+      max-width: 900px;
+      margin: 0 auto;
+      padding: 40px 20px;
+      border-top: 1px solid var(--border);
+    }
+    .license-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 16px;
+    }
+    @media (max-width: 600px) {
+      .license-grid { grid-template-columns: 1fr; }
+    }
+    .license-card {
+      background: var(--card);
+      border: 1px solid var(--border);
+      border-radius: 8px;
+      padding: 20px;
+    }
+    .license-card h3 {
+      font-size: 1rem;
+      margin-bottom: 8px;
+    }
+    .license-card p {
+      font-size: 0.85rem;
+      color: var(--muted);
+    }
+    .license-card a {
+      color: var(--accent);
+      text-decoration: none;
+    }
+    .license-card a:hover { text-decoration: underline; }
+
+    /* Footer */
+    footer {
+      text-align: center;
+      padding: 40px 20px;
+      color: var(--muted);
+      font-size: 0.85rem;
+      border-top: 1px solid var(--border);
+    }
+    footer a { color: var(--accent); text-decoration: none; }
+    footer a:hover { text-decoration: underline; }
+  </style>
+</head>
+<body>
+
+  <!-- Hero -->
+  <section class="hero">
+    <div class="hero-content">
+      <div class="hero-text">
+        <h1>C++ Mastery</h1>
+        <p class="subtitle">Professional C++ Learning Curriculum — From Fundamentals to Embedded Systems</p>
+        <div class="badge-row">
+          <span class="badge cpp17">C++17</span>
+          <span class="badge cpp20">C++20</span>
+          <span class="badge bilingual">EN + TR Bilingual</span>
+          <span class="badge draft">DRAFT</span>
+        </div>
+        <div class="cta-row">
+          <a href="https://github.com/nimbustan/cpp_mastery/raw/master/C%2B%2B_Mastery_Book.pdf" class="btn btn-primary">
+            <svg width="20" height="20" fill="currentColor" viewBox="0 0 16 16"><path d="M.5 9.9a.5.5 0 0 1 .5.5v2.5a1 1 0 0 0 1 1h12a1 1 0 0 0 1-1v-2.5a.5.5 0 0 1 1 0v2.5a2 2 0 0 1-2 2H2a2 2 0 0 1-2-2v-2.5a.5.5 0 0 1 .5-.5z"/><path d="M7.646 11.854a.5.5 0 0 0 .708 0l3-3a.5.5 0 0 0-.708-.708L8.5 10.293V1.5a.5.5 0 0 0-1 0v8.793L5.354 8.146a.5.5 0 1 0-.708.708l3 3z"/></svg>
+            Download PDF
+          </a>
+          <a href="https://github.com/nimbustan/cpp_mastery" class="btn btn-secondary">
+            <svg width="20" height="20" fill="currentColor" viewBox="0 0 16 16"><path d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27.68 0 1.36.09 2 .27 1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.012 8.012 0 0 0 16 8c0-4.42-3.58-8-8-8z"/></svg>
+            View Source
+          </a>
+        </div>
+      </div>
+      <div class="hero-cover">
+        <a href="https://github.com/nimbustan/cpp_mastery/raw/master/C%2B%2B_Mastery_Book.pdf">
+          <img src="cover.png" alt="C++ Mastery Book Cover" loading="eager">
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Stats -->
+  <div class="stats">
+    <div class="stat">
+      <div class="number">11</div>
+      <div class="label">Modules</div>
+    </div>
+    <div class="stat">
+      <div class="number">72</div>
+      <div class="label">Source Files</div>
+    </div>
+    <div class="stat">
+      <div class="number">20,281</div>
+      <div class="label">Lines of Code</div>
+    </div>
+    <div class="stat">
+      <div class="number">346</div>
+      <div class="label">Book Pages</div>
+    </div>
+  </div>
+
+  <!-- Modules -->
+  <section class="section">
+    <h2>Curriculum Modules</h2>
+    <div class="module-grid">
+
+      <div class="module-card" onclick="this.classList.toggle('open')">
+        <div class="card-header">
+          <div>
+            <div class="num">Module 01</div>
+            <div class="title">Basics — Temeller ve Hafıza</div>
+            <div class="meta">9 files · 1,659 lines <span class="std c17">C++17</span></div>
+          </div>
+          <span class="chevron">▼</span>
+        </div>
+        <div class="file-list">
+          <ul>
+            <li><a href="https://github.com/nimbustan/cpp_mastery/blob/master/module_01_basics/01_variables_and_memory.cpp">01_variables_and_memory.cpp</a></li>
+            <li><a href="https://github.com/nimbustan/cpp_mastery/blob/master/module_01_basics/02_pointers_and_references.cpp">02_pointers_and_references.cpp</a></li>
+            <li><a href="https://github.com/nimbustan/cpp_mastery/blob/master/module_01_basics/03_control_flow_and_functions.cpp">03_control_flow_and_functions.cpp</a></li>
+            <li><a href="https://github.com/nimbustan/cpp_mastery/blob/master/module_01_basics/04_operators_and_expressions.cpp">04_operators_and_expressions.cpp</a></li>
+            <li><a href="https://github.com/nimbustan/cpp_mastery/blob/master/module_01_basics/05_control_flow_deepdive.cpp">05_control_flow_deepdive.cpp</a></li>
+            <li><a href="https://github.com/nimbustan/cpp_mastery/blob/master/module_01_basics/06_strings_and_arrays.cpp">06_strings_and_arrays.cpp</a></li>
+            <li><a href="https://github.com/nimbustan/cpp_mastery/blob/master/module_01_basics/07_enums_type_conversions.cpp">07_enums_type_conversions.cpp</a></li>
+            <li><a href="https://github.com/nimbustan/cpp_mastery/blob/master/module_01_basics/08_file_io_and_streams.cpp">08_file_io_and_streams.cpp</a></li>
+            <li><a href="https://github.com/nimbustan/cpp_mastery/blob/master/module_01_basics/09_scope_namespace_recursion.cpp">09_scope_namespace_recursion.cpp</a></li>
+          </ul>
+          <a class="gh-link" href="https://github.com/nimbustan/cpp_mastery/tree/master/module_01_basics">View on GitHub →</a>
+        </div>
+      </div>
+
+      <div class="module-card" onclick="this.classList.toggle('open')">
+        <div class="card-header">
+          <div>
+            <div class="num">Module 02</div>
+            <div class="title">OOP — Nesne Yönelimli Programlama</div>
+            <div class="meta">8 files · 2,344 lines <span class="std c17">C++17</span></div>
+          </div>
+          <span class="chevron">▼</span>
+        </div>
+        <div class="file-list">
+          <ul>
+            <li><a href="https://github.com/nimbustan/cpp_mastery/blob/master/module_02_oop/01_classes_objects.cpp">01_classes_objects.cpp</a></li>
+            <li><a href="https://github.com/nimbustan/cpp_mastery/blob/master/module_02_oop/02_inheritance_polymorphism.cpp">02_inheritance_polymorphism.cpp</a></li>
+            <li><a href="https://github.com/nimbustan/cpp_mastery/blob/master/module_02_oop/03_rule_of_three_five.cpp">03_rule_of_three_five.cpp</a></li>
+            <li><a href="https://github.com/nimbustan/cpp_mastery/blob/master/module_02_oop/04_multiple_inheritance.cpp">04_multiple_inheritance.cpp</a></li>
+            <li><a href="https://github.com/nimbustan/cpp_mastery/blob/master/module_02_oop/05_encapsulation_abstraction.cpp">05_encapsulation_abstraction.cpp</a></li>
+            <li><a href="https://github.com/nimbustan/cpp_mastery/blob/master/module_02_oop/06_static_and_friends.cpp">06_static_and_friends.cpp</a></li>
+            <li><a href="https://github.com/nimbustan/cpp_mastery/blob/master/module_02_oop/07_nested_and_local_classes.cpp">07_nested_and_local_classes.cpp</a></li>
+            <li><a href="https://github.com/nimbustan/cpp_mastery/blob/master/module_02_oop/08_rtti_typeid.cpp">08_rtti_typeid.cpp</a></li>
+          </ul>
+          <a class="gh-link" href="https://github.com/nimbustan/cpp_mastery/tree/master/module_02_oop">View on GitHub →</a>
+        </div>
+      </div>
+
+      <div class="module-card" onclick="this.classList.toggle('open')">
+        <div class="card-header">
+          <div>
+            <div class="num">Module 03</div>
+            <div class="title">Modern C++ — Güvenlik ve Performans</div>
+            <div class="meta">5 files · 1,652 lines <span class="std c17">C++17</span></div>
+          </div>
+          <span class="chevron">▼</span>
+        </div>
+        <div class="file-list">
+          <ul>
+            <li><a href="https://github.com/nimbustan/cpp_mastery/blob/master/module_03_modern_cpp/01_smart_pointers.cpp">01_smart_pointers.cpp</a></li>
+            <li><a href="https://github.com/nimbustan/cpp_mastery/blob/master/module_03_modern_cpp/02_lambdas.cpp">02_lambdas.cpp</a></li>
+            <li><a href="https://github.com/nimbustan/cpp_mastery/blob/master/module_03_modern_cpp/03_move_semantics_rvalue.cpp">03_move_semantics_rvalue.cpp</a></li>
+            <li><a href="https://github.com/nimbustan/cpp_mastery/blob/master/module_03_modern_cpp/04_modern_types.cpp">04_modern_types.cpp</a></li>
+            <li><a href="https://github.com/nimbustan/cpp_mastery/blob/master/module_03_modern_cpp/05_structured_bindings_optional.cpp">05_structured_bindings_optional.cpp</a></li>
+          </ul>
+          <a class="gh-link" href="https://github.com/nimbustan/cpp_mastery/tree/master/module_03_modern_cpp">View on GitHub →</a>
+        </div>
+      </div>
+
+      <div class="module-card" onclick="this.classList.toggle('open')">
+        <div class="card-header">
+          <div>
+            <div class="num">Module 04</div>
+            <div class="title">Templates & STL — Şablonlar ve STL</div>
+            <div class="meta">8 files · 3,105 lines <span class="std c17">C++17</span></div>
+          </div>
+          <span class="chevron">▼</span>
+        </div>
+        <div class="file-list">
+          <ul>
+            <li><a href="https://github.com/nimbustan/cpp_mastery/blob/master/module_04_advanced/01_templates_stl.cpp">01_templates_stl.cpp</a></li>
+            <li><a href="https://github.com/nimbustan/cpp_mastery/blob/master/module_04_advanced/02_functors_callbacks.cpp">02_functors_callbacks.cpp</a></li>
+            <li><a href="https://github.com/nimbustan/cpp_mastery/blob/master/module_04_advanced/03_stl_containers_deepdive.cpp">03_stl_containers_deepdive.cpp</a></li>
+            <li><a href="https://github.com/nimbustan/cpp_mastery/blob/master/module_04_advanced/04_iterators_and_adaptors.cpp">04_iterators_and_adaptors.cpp</a></li>
+            <li><a href="https://github.com/nimbustan/cpp_mastery/blob/master/module_04_advanced/05_algorithms_masterclass.cpp">05_algorithms_masterclass.cpp</a></li>
+            <li><a href="https://github.com/nimbustan/cpp_mastery/blob/master/module_04_advanced/06_associative_containers.cpp">06_associative_containers.cpp</a></li>
+            <li><a href="https://github.com/nimbustan/cpp_mastery/blob/master/module_04_advanced/07_string_operations.cpp">07_string_operations.cpp</a></li>
+            <li><a href="https://github.com/nimbustan/cpp_mastery/blob/master/module_04_advanced/08_ranges_and_views.cpp">08_ranges_and_views.cpp</a></li>
+          </ul>
+          <a class="gh-link" href="https://github.com/nimbustan/cpp_mastery/tree/master/module_04_advanced">View on GitHub →</a>
+        </div>
+      </div>
+
+      <div class="module-card" onclick="this.classList.toggle('open')">
+        <div class="card-header">
+          <div>
+            <div class="num">Module 05</div>
+            <div class="title">Certification Prep — Sertifikasyon</div>
+            <div class="meta">6 files · 1,319 lines <span class="std c17">C++17</span></div>
+          </div>
+          <span class="chevron">▼</span>
+        </div>
+        <div class="file-list">
+          <ul>
+            <li><a href="https://github.com/nimbustan/cpp_mastery/blob/master/module_05_certification/01_undefined_behavior.cpp">01_undefined_behavior.cpp</a></li>
+            <li><a href="https://github.com/nimbustan/cpp_mastery/blob/master/module_05_certification/02_object_slicing_virtual.cpp">02_object_slicing_virtual.cpp</a></li>
+            <li><a href="https://github.com/nimbustan/cpp_mastery/blob/master/module_05_certification/03_type_casting.cpp">03_type_casting.cpp</a></li>
+            <li><a href="https://github.com/nimbustan/cpp_mastery/blob/master/module_05_certification/04_exceptions_handling.cpp">04_exceptions_handling.cpp</a></li>
+            <li><a href="https://github.com/nimbustan/cpp_mastery/blob/master/module_05_certification/05_const_correctness.cpp">05_const_correctness.cpp</a></li>
+            <li><a href="https://github.com/nimbustan/cpp_mastery/blob/master/module_05_certification/06_interview_gotchas.cpp">06_interview_gotchas.cpp</a></li>
+          </ul>
+          <a class="gh-link" href="https://github.com/nimbustan/cpp_mastery/tree/master/module_05_certification">View on GitHub →</a>
+        </div>
+      </div>
+
+      <div class="module-card" onclick="this.classList.toggle('open')">
+        <div class="card-header">
+          <div>
+            <div class="num">Module 06</div>
+            <div class="title">Industry Standards — Endüstri</div>
+            <div class="meta">6 files · 1,775 lines <span class="std c17">C++17</span></div>
+          </div>
+          <span class="chevron">▼</span>
+        </div>
+        <div class="file-list">
+          <ul>
+            <li><a href="https://github.com/nimbustan/cpp_mastery/blob/master/module_06_industry_standards/01_concurrency_threads.cpp">01_concurrency_threads.cpp</a></li>
+            <li><a href="https://github.com/nimbustan/cpp_mastery/blob/master/module_06_industry_standards/02_cmake_basics.txt">02_cmake_basics.txt</a></li>
+            <li><a href="https://github.com/nimbustan/cpp_mastery/blob/master/module_06_industry_standards/03_unit_testing_gtest.cpp">03_unit_testing_gtest.cpp</a></li>
+            <li><a href="https://github.com/nimbustan/cpp_mastery/blob/master/module_06_industry_standards/04_valgrind_profiling.cpp">04_valgrind_profiling.cpp</a></li>
+            <li><a href="https://github.com/nimbustan/cpp_mastery/blob/master/module_06_industry_standards/05_async_futures.cpp">05_async_futures.cpp</a></li>
+            <li><a href="https://github.com/nimbustan/cpp_mastery/blob/master/module_06_industry_standards/06_debugging_techniques.cpp">06_debugging_techniques.cpp</a></li>
+          </ul>
+          <a class="gh-link" href="https://github.com/nimbustan/cpp_mastery/tree/master/module_06_industry_standards">View on GitHub →</a>
+        </div>
+      </div>
+
+      <div class="module-card" onclick="this.classList.toggle('open')">
+        <div class="card-header">
+          <div>
+            <div class="num">Module 07</div>
+            <div class="title">Under the Hood — OS Derinlikleri</div>
+            <div class="meta">6 files · 1,497 lines <span class="std c17">C++17</span></div>
+          </div>
+          <span class="chevron">▼</span>
+        </div>
+        <div class="file-list">
+          <ul>
+            <li><a href="https://github.com/nimbustan/cpp_mastery/blob/master/module_07_under_the_hood/01_vtable_memory_layout.cpp">01_vtable_memory_layout.cpp</a></li>
+            <li><a href="https://github.com/nimbustan/cpp_mastery/blob/master/module_07_under_the_hood/02_sigsegv_and_raii.cpp">02_sigsegv_and_raii.cpp</a></li>
+            <li><a href="https://github.com/nimbustan/cpp_mastery/blob/master/module_07_under_the_hood/03_fork_vs_thread_pool.cpp">03_fork_vs_thread_pool.cpp</a></li>
+            <li><a href="https://github.com/nimbustan/cpp_mastery/blob/master/module_07_under_the_hood/04_memory_model_and_cache.cpp">04_memory_model_and_cache.cpp</a></li>
+            <li><a href="https://github.com/nimbustan/cpp_mastery/blob/master/module_07_under_the_hood/05_compilation_pipeline.cpp">05_compilation_pipeline.cpp</a></li>
+            <li><a href="https://github.com/nimbustan/cpp_mastery/blob/master/module_07_under_the_hood/06_abi_and_name_mangling.cpp">06_abi_and_name_mangling.cpp</a></li>
+          </ul>
+          <a class="gh-link" href="https://github.com/nimbustan/cpp_mastery/tree/master/module_07_under_the_hood">View on GitHub →</a>
+        </div>
+      </div>
+
+      <div class="module-card" onclick="this.classList.toggle('open')">
+        <div class="card-header">
+          <div>
+            <div class="num">Module 08</div>
+            <div class="title">Core Guidelines — Üst Düzey Kurallar</div>
+            <div class="meta">6 files · 1,393 lines <span class="std c17">C++17</span></div>
+          </div>
+          <span class="chevron">▼</span>
+        </div>
+        <div class="file-list">
+          <ul>
+            <li><a href="https://github.com/nimbustan/cpp_mastery/blob/master/module_08_core_guidelines/01_philosophy_and_interfaces.cpp">01_philosophy_and_interfaces.cpp</a></li>
+            <li><a href="https://github.com/nimbustan/cpp_mastery/blob/master/module_08_core_guidelines/02_resource_management_rule_of_zero.cpp">02_resource_management_rule_of_zero.cpp</a></li>
+            <li><a href="https://github.com/nimbustan/cpp_mastery/blob/master/module_08_core_guidelines/03_error_handling.cpp">03_error_handling.cpp</a></li>
+            <li><a href="https://github.com/nimbustan/cpp_mastery/blob/master/module_08_core_guidelines/04_concurrency_and_performance.cpp">04_concurrency_and_performance.cpp</a></li>
+            <li><a href="https://github.com/nimbustan/cpp_mastery/blob/master/module_08_core_guidelines/05_smart_pointer_guidelines.cpp">05_smart_pointer_guidelines.cpp</a></li>
+            <li><a href="https://github.com/nimbustan/cpp_mastery/blob/master/module_08_core_guidelines/06_class_design_guidelines.cpp">06_class_design_guidelines.cpp</a></li>
+          </ul>
+          <a class="gh-link" href="https://github.com/nimbustan/cpp_mastery/tree/master/module_08_core_guidelines">View on GitHub →</a>
+        </div>
+      </div>
+
+      <div class="module-card" onclick="this.classList.toggle('open')">
+        <div class="card-header">
+          <div>
+            <div class="num">Module 09</div>
+            <div class="title">Advanced Mechanics — İleri Mekanikler</div>
+            <div class="meta">7 files · 1,570 lines <span class="std c20">C++20</span></div>
+          </div>
+          <span class="chevron">▼</span>
+        </div>
+        <div class="file-list">
+          <ul>
+            <li><a href="https://github.com/nimbustan/cpp_mastery/blob/master/module_09_advanced_mechanics/01_bit_manipulation_and_alignment.cpp">01_bit_manipulation_and_alignment.cpp</a></li>
+            <li><a href="https://github.com/nimbustan/cpp_mastery/blob/master/module_09_advanced_mechanics/02_operator_overloading.cpp">02_operator_overloading.cpp</a></li>
+            <li><a href="https://github.com/nimbustan/cpp_mastery/blob/master/module_09_advanced_mechanics/03_advanced_pointers.cpp">03_advanced_pointers.cpp</a></li>
+            <li><a href="https://github.com/nimbustan/cpp_mastery/blob/master/module_09_advanced_mechanics/04_constant_evaluation.cpp">04_constant_evaluation.cpp</a></li>
+            <li><a href="https://github.com/nimbustan/cpp_mastery/blob/master/module_09_advanced_mechanics/05_type_traits_and_concepts.cpp">05_type_traits_and_concepts.cpp</a></li>
+            <li><a href="https://github.com/nimbustan/cpp_mastery/blob/master/module_09_advanced_mechanics/06_sfinae_and_tag_dispatch.cpp">06_sfinae_and_tag_dispatch.cpp</a></li>
+            <li><a href="https://github.com/nimbustan/cpp_mastery/blob/master/module_09_advanced_mechanics/07_crtp_pattern.cpp">07_crtp_pattern.cpp</a></li>
+          </ul>
+          <a class="gh-link" href="https://github.com/nimbustan/cpp_mastery/tree/master/module_09_advanced_mechanics">View on GitHub →</a>
+        </div>
+      </div>
+
+      <div class="module-card" onclick="this.classList.toggle('open')">
+        <div class="card-header">
+          <div>
+            <div class="num">Module 10</div>
+            <div class="title">Design Patterns — Tasarım Kalıpları</div>
+            <div class="meta">6 files · 2,415 lines <span class="std c20">C++20</span></div>
+          </div>
+          <span class="chevron">▼</span>
+        </div>
+        <div class="file-list">
+          <ul>
+            <li><a href="https://github.com/nimbustan/cpp_mastery/blob/master/module_10_design_patterns/01_solid_principles.cpp">01_solid_principles.cpp</a></li>
+            <li><a href="https://github.com/nimbustan/cpp_mastery/blob/master/module_10_design_patterns/02_creational_patterns.cpp">02_creational_patterns.cpp</a></li>
+            <li><a href="https://github.com/nimbustan/cpp_mastery/blob/master/module_10_design_patterns/03_behavioral_patterns.cpp">03_behavioral_patterns.cpp</a></li>
+            <li><a href="https://github.com/nimbustan/cpp_mastery/blob/master/module_10_design_patterns/04_structural_patterns.cpp">04_structural_patterns.cpp</a></li>
+            <li><a href="https://github.com/nimbustan/cpp_mastery/blob/master/module_10_design_patterns/05_testable_design.cpp">05_testable_design.cpp</a></li>
+            <li><a href="https://github.com/nimbustan/cpp_mastery/blob/master/module_10_design_patterns/06_pattern_decision_guide.cpp">06_pattern_decision_guide.cpp</a></li>
+          </ul>
+          <a class="gh-link" href="https://github.com/nimbustan/cpp_mastery/tree/master/module_10_design_patterns">View on GitHub →</a>
+        </div>
+      </div>
+
+      <div class="module-card" onclick="this.classList.toggle('open')">
+        <div class="card-header">
+          <div>
+            <div class="num">Module 11</div>
+            <div class="title">Embedded Systems — Gömülü Sistemler</div>
+            <div class="meta">5 files · 1,552 lines <span class="std c20">C++20</span></div>
+          </div>
+          <span class="chevron">▼</span>
+        </div>
+        <div class="file-list">
+          <ul>
+            <li><a href="https://github.com/nimbustan/cpp_mastery/blob/master/module_11_embedded_systems/01_volatile_hardware.cpp">01_volatile_hardware.cpp</a></li>
+            <li><a href="https://github.com/nimbustan/cpp_mastery/blob/master/module_11_embedded_systems/02_bitfields_protocols.cpp">02_bitfields_protocols.cpp</a></li>
+            <li><a href="https://github.com/nimbustan/cpp_mastery/blob/master/module_11_embedded_systems/03_embedded_constraints.cpp">03_embedded_constraints.cpp</a></li>
+            <li><a href="https://github.com/nimbustan/cpp_mastery/blob/master/module_11_embedded_systems/04_rtos_concurrency.cpp">04_rtos_concurrency.cpp</a></li>
+            <li><a href="https://github.com/nimbustan/cpp_mastery/blob/master/module_11_embedded_systems/05_advanced_parallelism.cpp">05_advanced_parallelism.cpp</a></li>
+          </ul>
+          <a class="gh-link" href="https://github.com/nimbustan/cpp_mastery/tree/master/module_11_embedded_systems">View on GitHub →</a>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- License -->
+  <section class="license-section">
+    <h2>License</h2>
+    <div class="license-grid">
+      <div class="license-card">
+        <h3>📄 Source Code — Apache 2.0</h3>
+        <p>Use, modify, and distribute freely. Retain attribution, state changes, and include the license.</p>
+        <p style="margin-top:8px;"><a href="https://www.apache.org/licenses/LICENSE-2.0">Full License →</a></p>
+      </div>
+      <div class="license-card">
+        <h3>📚 Book Content — CC BY-NC-SA 4.0</h3>
+        <p>Share and adapt with attribution. Non-commercial only. Same license for derivatives.</p>
+        <p style="margin-top:8px;"><a href="https://creativecommons.org/licenses/by-nc-sa/4.0/">Full License →</a></p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer>
+    <p>© 2026 <strong>Murat Mecit KAHRAMANLI</strong></p>
+    <p style="margin-top:4px;">
+      <a href="https://github.com/nimbustan/cpp_mastery">GitHub</a> ·
+      Built with cppreference.com, ISO C++, and C++ Core Guidelines
+    </p>
+  </footer>
+
+</body>
+</html>

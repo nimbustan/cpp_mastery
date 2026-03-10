@@ -1,0 +1,362 @@
+[
+  {
+    "directory": "/home/nimbus/repos/cpp_mastery",
+    "command": "g++ -Wall -Wextra -Wpedantic -Wshadow -Wconversion -Wsign-conversion -Wnull-dereference -Wformat=2 -std=c++17 -c main.cpp",
+    "file": "/home/nimbus/repos/cpp_mastery/main.cpp"
+  },
+  {
+    "directory": "/home/nimbus/repos/cpp_mastery",
+    "command": "g++ -Wall -Wextra -Wpedantic -Wshadow -Wconversion -Wsign-conversion -Wnull-dereference -Wformat=2 -std=c++17 -c module_01_basics/01_variables_and_memory.cpp",
+    "file": "/home/nimbus/repos/cpp_mastery/module_01_basics/01_variables_and_memory.cpp"
+  },
+  {
+    "directory": "/home/nimbus/repos/cpp_mastery",
+    "command": "g++ -Wall -Wextra -Wpedantic -Wshadow -Wconversion -Wsign-conversion -Wnull-dereference -Wformat=2 -std=c++17 -c module_01_basics/02_pointers_and_references.cpp",
+    "file": "/home/nimbus/repos/cpp_mastery/module_01_basics/02_pointers_and_references.cpp"
+  },
+  {
+    "directory": "/home/nimbus/repos/cpp_mastery",
+    "command": "g++ -Wall -Wextra -Wpedantic -Wshadow -Wconversion -Wsign-conversion -Wnull-dereference -Wformat=2 -std=c++17 -c module_01_basics/03_control_flow_and_functions.cpp",
+    "file": "/home/nimbus/repos/cpp_mastery/module_01_basics/03_control_flow_and_functions.cpp"
+  },
+  {
+    "directory": "/home/nimbus/repos/cpp_mastery",
+    "command": "g++ -Wall -Wextra -Wpedantic -Wshadow -Wconversion -Wsign-conversion -Wnull-dereference -Wformat=2 -std=c++17 -c module_01_basics/04_operators_and_expressions.cpp",
+    "file": "/home/nimbus/repos/cpp_mastery/module_01_basics/04_operators_and_expressions.cpp"
+  },
+  {
+    "directory": "/home/nimbus/repos/cpp_mastery",
+    "command": "g++ -Wall -Wextra -Wpedantic -Wshadow -Wconversion -Wsign-conversion -Wnull-dereference -Wformat=2 -std=c++17 -c module_01_basics/05_control_flow_deepdive.cpp",
+    "file": "/home/nimbus/repos/cpp_mastery/module_01_basics/05_control_flow_deepdive.cpp"
+  },
+  {
+    "directory": "/home/nimbus/repos/cpp_mastery",
+    "command": "g++ -Wall -Wextra -Wpedantic -Wshadow -Wconversion -Wsign-conversion -Wnull-dereference -Wformat=2 -std=c++17 -c module_01_basics/06_strings_and_arrays.cpp",
+    "file": "/home/nimbus/repos/cpp_mastery/module_01_basics/06_strings_and_arrays.cpp"
+  },
+  {
+    "directory": "/home/nimbus/repos/cpp_mastery",
+    "command": "g++ -Wall -Wextra -Wpedantic -Wshadow -Wconversion -Wsign-conversion -Wnull-dereference -Wformat=2 -std=c++17 -c module_01_basics/07_enums_type_conversions.cpp",
+    "file": "/home/nimbus/repos/cpp_mastery/module_01_basics/07_enums_type_conversions.cpp"
+  },
+  {
+    "directory": "/home/nimbus/repos/cpp_mastery",
+    "command": "g++ -Wall -Wextra -Wpedantic -Wshadow -Wconversion -Wsign-conversion -Wnull-dereference -Wformat=2 -std=c++17 -c module_01_basics/08_file_io_and_streams.cpp",
+    "file": "/home/nimbus/repos/cpp_mastery/module_01_basics/08_file_io_and_streams.cpp"
+  },
+  {
+    "directory": "/home/nimbus/repos/cpp_mastery",
+    "command": "g++ -Wall -Wextra -Wpedantic -Wshadow -Wconversion -Wsign-conversion -Wnull-dereference -Wformat=2 -std=c++17 -c module_01_basics/09_scope_namespace_recursion.cpp",
+    "file": "/home/nimbus/repos/cpp_mastery/module_01_basics/09_scope_namespace_recursion.cpp"
+  },
+  {
+    "directory": "/home/nimbus/repos/cpp_mastery",
+    "command": "g++ -Wall -Wextra -Wpedantic -Wshadow -Wconversion -Wsign-conversion -Wnull-dereference -Wformat=2 -std=c++17 -c module_02_oop/01_classes_objects.cpp",
+    "file": "/home/nimbus/repos/cpp_mastery/module_02_oop/01_classes_objects.cpp"
+  },
+  {
+    "directory": "/home/nimbus/repos/cpp_mastery",
+    "command": "g++ -Wall -Wextra -Wpedantic -Wshadow -Wconversion -Wsign-conversion -Wnull-dereference -Wformat=2 -std=c++17 -c module_02_oop/02_inheritance_polymorphism.cpp",
+    "file": "/home/nimbus/repos/cpp_mastery/module_02_oop/02_inheritance_polymorphism.cpp"
+  },
+  {
+    "directory": "/home/nimbus/repos/cpp_mastery",
+    "command": "g++ -Wall -Wextra -Wpedantic -Wshadow -Wconversion -Wsign-conversion -Wnull-dereference -Wformat=2 -std=c++17 -c module_02_oop/03_rule_of_three_five.cpp",
+    "file": "/home/nimbus/repos/cpp_mastery/module_02_oop/03_rule_of_three_five.cpp"
+  },
+  {
+    "directory": "/home/nimbus/repos/cpp_mastery",
+    "command": "g++ -Wall -Wextra -Wpedantic -Wshadow -Wconversion -Wsign-conversion -Wnull-dereference -Wformat=2 -std=c++17 -c module_02_oop/04_multiple_inheritance.cpp",
+    "file": "/home/nimbus/repos/cpp_mastery/module_02_oop/04_multiple_inheritance.cpp"
+  },
+  {
+    "directory": "/home/nimbus/repos/cpp_mastery",
+    "command": "g++ -Wall -Wextra -Wpedantic -Wshadow -Wconversion -Wsign-conversion -Wnull-dereference -Wformat=2 -std=c++17 -c module_02_oop/05_encapsulation_abstraction.cpp",
+    "file": "/home/nimbus/repos/cpp_mastery/module_02_oop/05_encapsulation_abstraction.cpp"
+  },
+  {
+    "directory": "/home/nimbus/repos/cpp_mastery",
+    "command": "g++ -Wall -Wextra -Wpedantic -Wshadow -Wconversion -Wsign-conversion -Wnull-dereference -Wformat=2 -std=c++17 -c module_02_oop/06_static_and_friends.cpp",
+    "file": "/home/nimbus/repos/cpp_mastery/module_02_oop/06_static_and_friends.cpp"
+  },
+  {
+    "directory": "/home/nimbus/repos/cpp_mastery",
+    "command": "g++ -Wall -Wextra -Wpedantic -Wshadow -Wconversion -Wsign-conversion -Wnull-dereference -Wformat=2 -std=c++17 -c module_02_oop/07_nested_and_local_classes.cpp",
+    "file": "/home/nimbus/repos/cpp_mastery/module_02_oop/07_nested_and_local_classes.cpp"
+  },
+  {
+    "directory": "/home/nimbus/repos/cpp_mastery",
+    "command": "g++ -Wall -Wextra -Wpedantic -Wshadow -Wconversion -Wsign-conversion -Wnull-dereference -Wformat=2 -std=c++17 -c module_02_oop/08_rtti_typeid.cpp",
+    "file": "/home/nimbus/repos/cpp_mastery/module_02_oop/08_rtti_typeid.cpp"
+  },
+  {
+    "directory": "/home/nimbus/repos/cpp_mastery",
+    "command": "g++ -Wall -Wextra -Wpedantic -Wshadow -Wconversion -Wsign-conversion -Wnull-dereference -Wformat=2 -std=c++17 -c module_03_modern_cpp/01_smart_pointers.cpp",
+    "file": "/home/nimbus/repos/cpp_mastery/module_03_modern_cpp/01_smart_pointers.cpp"
+  },
+  {
+    "directory": "/home/nimbus/repos/cpp_mastery",
+    "command": "g++ -Wall -Wextra -Wpedantic -Wshadow -Wconversion -Wsign-conversion -Wnull-dereference -Wformat=2 -std=c++17 -c module_03_modern_cpp/02_lambdas.cpp",
+    "file": "/home/nimbus/repos/cpp_mastery/module_03_modern_cpp/02_lambdas.cpp"
+  },
+  {
+    "directory": "/home/nimbus/repos/cpp_mastery",
+    "command": "g++ -Wall -Wextra -Wpedantic -Wshadow -Wconversion -Wsign-conversion -Wnull-dereference -Wformat=2 -std=c++17 -c module_03_modern_cpp/03_move_semantics_rvalue.cpp",
+    "file": "/home/nimbus/repos/cpp_mastery/module_03_modern_cpp/03_move_semantics_rvalue.cpp"
+  },
+  {
+    "directory": "/home/nimbus/repos/cpp_mastery",
+    "command": "g++ -Wall -Wextra -Wpedantic -Wshadow -Wconversion -Wsign-conversion -Wnull-dereference -Wformat=2 -std=c++17 -c module_03_modern_cpp/04_modern_types.cpp",
+    "file": "/home/nimbus/repos/cpp_mastery/module_03_modern_cpp/04_modern_types.cpp"
+  },
+  {
+    "directory": "/home/nimbus/repos/cpp_mastery",
+    "command": "g++ -Wall -Wextra -Wpedantic -Wshadow -Wconversion -Wsign-conversion -Wnull-dereference -Wformat=2 -std=c++17 -c module_03_modern_cpp/05_structured_bindings_optional.cpp",
+    "file": "/home/nimbus/repos/cpp_mastery/module_03_modern_cpp/05_structured_bindings_optional.cpp"
+  },
+  {
+    "directory": "/home/nimbus/repos/cpp_mastery",
+    "command": "g++ -Wall -Wextra -Wpedantic -Wshadow -Wconversion -Wsign-conversion -Wnull-dereference -Wformat=2 -std=c++17 -c module_04_advanced/01_templates_stl.cpp",
+    "file": "/home/nimbus/repos/cpp_mastery/module_04_advanced/01_templates_stl.cpp"
+  },
+  {
+    "directory": "/home/nimbus/repos/cpp_mastery",
+    "command": "g++ -Wall -Wextra -Wpedantic -Wshadow -Wconversion -Wsign-conversion -Wnull-dereference -Wformat=2 -std=c++17 -c module_04_advanced/02_functors_callbacks.cpp",
+    "file": "/home/nimbus/repos/cpp_mastery/module_04_advanced/02_functors_callbacks.cpp"
+  },
+  {
+    "directory": "/home/nimbus/repos/cpp_mastery",
+    "command": "g++ -Wall -Wextra -Wpedantic -Wshadow -Wconversion -Wsign-conversion -Wnull-dereference -Wformat=2 -std=c++17 -c module_04_advanced/03_stl_containers_deepdive.cpp",
+    "file": "/home/nimbus/repos/cpp_mastery/module_04_advanced/03_stl_containers_deepdive.cpp"
+  },
+  {
+    "directory": "/home/nimbus/repos/cpp_mastery",
+    "command": "g++ -Wall -Wextra -Wpedantic -Wshadow -Wconversion -Wsign-conversion -Wnull-dereference -Wformat=2 -std=c++17 -c module_04_advanced/04_iterators_and_adaptors.cpp",
+    "file": "/home/nimbus/repos/cpp_mastery/module_04_advanced/04_iterators_and_adaptors.cpp"
+  },
+  {
+    "directory": "/home/nimbus/repos/cpp_mastery",
+    "command": "g++ -Wall -Wextra -Wpedantic -Wshadow -Wconversion -Wsign-conversion -Wnull-dereference -Wformat=2 -std=c++17 -c module_04_advanced/05_algorithms_masterclass.cpp",
+    "file": "/home/nimbus/repos/cpp_mastery/module_04_advanced/05_algorithms_masterclass.cpp"
+  },
+  {
+    "directory": "/home/nimbus/repos/cpp_mastery",
+    "command": "g++ -Wall -Wextra -Wpedantic -Wshadow -Wconversion -Wsign-conversion -Wnull-dereference -Wformat=2 -std=c++17 -c module_04_advanced/06_associative_containers.cpp",
+    "file": "/home/nimbus/repos/cpp_mastery/module_04_advanced/06_associative_containers.cpp"
+  },
+  {
+    "directory": "/home/nimbus/repos/cpp_mastery",
+    "command": "g++ -Wall -Wextra -Wpedantic -Wshadow -Wconversion -Wsign-conversion -Wnull-dereference -Wformat=2 -std=c++17 -c module_04_advanced/07_string_operations.cpp",
+    "file": "/home/nimbus/repos/cpp_mastery/module_04_advanced/07_string_operations.cpp"
+  },
+  {
+    "directory": "/home/nimbus/repos/cpp_mastery",
+    "command": "g++ -Wall -Wextra -Wpedantic -Wshadow -Wconversion -Wsign-conversion -Wnull-dereference -Wformat=2 -std=c++17 -c module_04_advanced/08_ranges_and_views.cpp",
+    "file": "/home/nimbus/repos/cpp_mastery/module_04_advanced/08_ranges_and_views.cpp"
+  },
+  {
+    "directory": "/home/nimbus/repos/cpp_mastery",
+    "command": "g++ -Wall -Wextra -Wpedantic -Wshadow -Wconversion -Wsign-conversion -Wnull-dereference -Wformat=2 -std=c++17 -c module_05_certification/01_undefined_behavior.cpp",
+    "file": "/home/nimbus/repos/cpp_mastery/module_05_certification/01_undefined_behavior.cpp"
+  },
+  {
+    "directory": "/home/nimbus/repos/cpp_mastery",
+    "command": "g++ -Wall -Wextra -Wpedantic -Wshadow -Wconversion -Wsign-conversion -Wnull-dereference -Wformat=2 -std=c++17 -c module_05_certification/02_object_slicing_virtual.cpp",
+    "file": "/home/nimbus/repos/cpp_mastery/module_05_certification/02_object_slicing_virtual.cpp"
+  },
+  {
+    "directory": "/home/nimbus/repos/cpp_mastery",
+    "command": "g++ -Wall -Wextra -Wpedantic -Wshadow -Wconversion -Wsign-conversion -Wnull-dereference -Wformat=2 -std=c++17 -c module_05_certification/03_type_casting.cpp",
+    "file": "/home/nimbus/repos/cpp_mastery/module_05_certification/03_type_casting.cpp"
+  },
+  {
+    "directory": "/home/nimbus/repos/cpp_mastery",
+    "command": "g++ -Wall -Wextra -Wpedantic -Wshadow -Wconversion -Wsign-conversion -Wnull-dereference -Wformat=2 -std=c++17 -c module_05_certification/04_exceptions_handling.cpp",
+    "file": "/home/nimbus/repos/cpp_mastery/module_05_certification/04_exceptions_handling.cpp"
+  },
+  {
+    "directory": "/home/nimbus/repos/cpp_mastery",
+    "command": "g++ -Wall -Wextra -Wpedantic -Wshadow -Wconversion -Wsign-conversion -Wnull-dereference -Wformat=2 -std=c++17 -pthread -c module_05_certification/05_const_correctness.cpp",
+    "file": "/home/nimbus/repos/cpp_mastery/module_05_certification/05_const_correctness.cpp"
+  },
+  {
+    "directory": "/home/nimbus/repos/cpp_mastery",
+    "command": "g++ -Wall -Wextra -Wpedantic -Wshadow -Wconversion -Wsign-conversion -Wnull-dereference -Wformat=2 -std=c++17 -c module_05_certification/06_interview_gotchas.cpp",
+    "file": "/home/nimbus/repos/cpp_mastery/module_05_certification/06_interview_gotchas.cpp"
+  },
+  {
+    "directory": "/home/nimbus/repos/cpp_mastery",
+    "command": "g++ -Wall -Wextra -Wpedantic -Wshadow -Wconversion -Wsign-conversion -Wnull-dereference -Wformat=2 -std=c++17 -pthread -c module_06_industry_standards/01_concurrency_threads.cpp",
+    "file": "/home/nimbus/repos/cpp_mastery/module_06_industry_standards/01_concurrency_threads.cpp"
+  },
+  {
+    "directory": "/home/nimbus/repos/cpp_mastery",
+    "command": "g++ -Wall -Wextra -Wpedantic -Wshadow -Wconversion -Wsign-conversion -Wnull-dereference -Wformat=2 -std=c++17 -c module_06_industry_standards/03_unit_testing_gtest.cpp",
+    "file": "/home/nimbus/repos/cpp_mastery/module_06_industry_standards/03_unit_testing_gtest.cpp"
+  },
+  {
+    "directory": "/home/nimbus/repos/cpp_mastery",
+    "command": "g++ -Wall -Wextra -Wpedantic -Wshadow -Wconversion -Wsign-conversion -Wnull-dereference -Wformat=2 -std=c++17 -c module_06_industry_standards/04_valgrind_profiling.cpp",
+    "file": "/home/nimbus/repos/cpp_mastery/module_06_industry_standards/04_valgrind_profiling.cpp"
+  },
+  {
+    "directory": "/home/nimbus/repos/cpp_mastery",
+    "command": "g++ -Wall -Wextra -Wpedantic -Wshadow -Wconversion -Wsign-conversion -Wnull-dereference -Wformat=2 -std=c++17 -pthread -c module_06_industry_standards/05_async_futures.cpp",
+    "file": "/home/nimbus/repos/cpp_mastery/module_06_industry_standards/05_async_futures.cpp"
+  },
+  {
+    "directory": "/home/nimbus/repos/cpp_mastery",
+    "command": "g++ -Wall -Wextra -Wpedantic -Wshadow -Wconversion -Wsign-conversion -Wnull-dereference -Wformat=2 -std=c++17 -c module_06_industry_standards/06_debugging_techniques.cpp",
+    "file": "/home/nimbus/repos/cpp_mastery/module_06_industry_standards/06_debugging_techniques.cpp"
+  },
+  {
+    "directory": "/home/nimbus/repos/cpp_mastery",
+    "command": "g++ -Wall -Wextra -Wpedantic -Wshadow -Wconversion -Wsign-conversion -Wnull-dereference -Wformat=2 -std=c++17 -c module_07_under_the_hood/01_vtable_memory_layout.cpp",
+    "file": "/home/nimbus/repos/cpp_mastery/module_07_under_the_hood/01_vtable_memory_layout.cpp"
+  },
+  {
+    "directory": "/home/nimbus/repos/cpp_mastery",
+    "command": "g++ -Wall -Wextra -Wpedantic -Wshadow -Wconversion -Wsign-conversion -Wnull-dereference -Wformat=2 -std=c++17 -c module_07_under_the_hood/02_sigsegv_and_raii.cpp",
+    "file": "/home/nimbus/repos/cpp_mastery/module_07_under_the_hood/02_sigsegv_and_raii.cpp"
+  },
+  {
+    "directory": "/home/nimbus/repos/cpp_mastery",
+    "command": "g++ -Wall -Wextra -Wpedantic -Wshadow -Wconversion -Wsign-conversion -Wnull-dereference -Wformat=2 -std=c++17 -pthread -c module_07_under_the_hood/03_fork_vs_thread_pool.cpp",
+    "file": "/home/nimbus/repos/cpp_mastery/module_07_under_the_hood/03_fork_vs_thread_pool.cpp"
+  },
+  {
+    "directory": "/home/nimbus/repos/cpp_mastery",
+    "command": "g++ -Wall -Wextra -Wpedantic -Wshadow -Wconversion -Wsign-conversion -Wnull-dereference -Wformat=2 -std=c++17 -pthread -c module_07_under_the_hood/04_memory_model_and_cache.cpp",
+    "file": "/home/nimbus/repos/cpp_mastery/module_07_under_the_hood/04_memory_model_and_cache.cpp"
+  },
+  {
+    "directory": "/home/nimbus/repos/cpp_mastery",
+    "command": "g++ -Wall -Wextra -Wpedantic -Wshadow -Wconversion -Wsign-conversion -Wnull-dereference -Wformat=2 -std=c++17 -c module_07_under_the_hood/05_compilation_pipeline.cpp",
+    "file": "/home/nimbus/repos/cpp_mastery/module_07_under_the_hood/05_compilation_pipeline.cpp"
+  },
+  {
+    "directory": "/home/nimbus/repos/cpp_mastery",
+    "command": "g++ -Wall -Wextra -Wpedantic -Wshadow -Wconversion -Wsign-conversion -Wnull-dereference -Wformat=2 -std=c++17 -c module_07_under_the_hood/06_abi_and_name_mangling.cpp",
+    "file": "/home/nimbus/repos/cpp_mastery/module_07_under_the_hood/06_abi_and_name_mangling.cpp"
+  },
+  {
+    "directory": "/home/nimbus/repos/cpp_mastery",
+    "command": "g++ -Wall -Wextra -Wpedantic -Wshadow -Wconversion -Wsign-conversion -Wnull-dereference -Wformat=2 -std=c++17 -c module_08_core_guidelines/01_philosophy_and_interfaces.cpp",
+    "file": "/home/nimbus/repos/cpp_mastery/module_08_core_guidelines/01_philosophy_and_interfaces.cpp"
+  },
+  {
+    "directory": "/home/nimbus/repos/cpp_mastery",
+    "command": "g++ -Wall -Wextra -Wpedantic -Wshadow -Wconversion -Wsign-conversion -Wnull-dereference -Wformat=2 -std=c++17 -c module_08_core_guidelines/02_resource_management_rule_of_zero.cpp",
+    "file": "/home/nimbus/repos/cpp_mastery/module_08_core_guidelines/02_resource_management_rule_of_zero.cpp"
+  },
+  {
+    "directory": "/home/nimbus/repos/cpp_mastery",
+    "command": "g++ -Wall -Wextra -Wpedantic -Wshadow -Wconversion -Wsign-conversion -Wnull-dereference -Wformat=2 -std=c++17 -c module_08_core_guidelines/03_error_handling.cpp",
+    "file": "/home/nimbus/repos/cpp_mastery/module_08_core_guidelines/03_error_handling.cpp"
+  },
+  {
+    "directory": "/home/nimbus/repos/cpp_mastery",
+    "command": "g++ -Wall -Wextra -Wpedantic -Wshadow -Wconversion -Wsign-conversion -Wnull-dereference -Wformat=2 -std=c++17 -pthread -c module_08_core_guidelines/04_concurrency_and_performance.cpp",
+    "file": "/home/nimbus/repos/cpp_mastery/module_08_core_guidelines/04_concurrency_and_performance.cpp"
+  },
+  {
+    "directory": "/home/nimbus/repos/cpp_mastery",
+    "command": "g++ -Wall -Wextra -Wpedantic -Wshadow -Wconversion -Wsign-conversion -Wnull-dereference -Wformat=2 -std=c++17 -c module_08_core_guidelines/05_smart_pointer_guidelines.cpp",
+    "file": "/home/nimbus/repos/cpp_mastery/module_08_core_guidelines/05_smart_pointer_guidelines.cpp"
+  },
+  {
+    "directory": "/home/nimbus/repos/cpp_mastery",
+    "command": "g++ -Wall -Wextra -Wpedantic -Wshadow -Wconversion -Wsign-conversion -Wnull-dereference -Wformat=2 -std=c++17 -c module_08_core_guidelines/06_class_design_guidelines.cpp",
+    "file": "/home/nimbus/repos/cpp_mastery/module_08_core_guidelines/06_class_design_guidelines.cpp"
+  },
+  {
+    "directory": "/home/nimbus/repos/cpp_mastery",
+    "command": "g++ -Wall -Wextra -Wpedantic -Wshadow -Wconversion -Wsign-conversion -Wnull-dereference -Wformat=2 -std=c++20 -c module_09_advanced_mechanics/01_bit_manipulation_and_alignment.cpp",
+    "file": "/home/nimbus/repos/cpp_mastery/module_09_advanced_mechanics/01_bit_manipulation_and_alignment.cpp"
+  },
+  {
+    "directory": "/home/nimbus/repos/cpp_mastery",
+    "command": "g++ -Wall -Wextra -Wpedantic -Wshadow -Wconversion -Wsign-conversion -Wnull-dereference -Wformat=2 -std=c++20 -c module_09_advanced_mechanics/02_operator_overloading.cpp",
+    "file": "/home/nimbus/repos/cpp_mastery/module_09_advanced_mechanics/02_operator_overloading.cpp"
+  },
+  {
+    "directory": "/home/nimbus/repos/cpp_mastery",
+    "command": "g++ -Wall -Wextra -Wpedantic -Wshadow -Wconversion -Wsign-conversion -Wnull-dereference -Wformat=2 -std=c++20 -c module_09_advanced_mechanics/03_advanced_pointers.cpp",
+    "file": "/home/nimbus/repos/cpp_mastery/module_09_advanced_mechanics/03_advanced_pointers.cpp"
+  },
+  {
+    "directory": "/home/nimbus/repos/cpp_mastery",
+    "command": "g++ -Wall -Wextra -Wpedantic -Wshadow -Wconversion -Wsign-conversion -Wnull-dereference -Wformat=2 -std=c++20 -c module_09_advanced_mechanics/04_constant_evaluation.cpp",
+    "file": "/home/nimbus/repos/cpp_mastery/module_09_advanced_mechanics/04_constant_evaluation.cpp"
+  },
+  {
+    "directory": "/home/nimbus/repos/cpp_mastery",
+    "command": "g++ -Wall -Wextra -Wpedantic -Wshadow -Wconversion -Wsign-conversion -Wnull-dereference -Wformat=2 -std=c++20 -c module_09_advanced_mechanics/05_type_traits_and_concepts.cpp",
+    "file": "/home/nimbus/repos/cpp_mastery/module_09_advanced_mechanics/05_type_traits_and_concepts.cpp"
+  },
+  {
+    "directory": "/home/nimbus/repos/cpp_mastery",
+    "command": "g++ -Wall -Wextra -Wpedantic -Wshadow -Wconversion -Wsign-conversion -Wnull-dereference -Wformat=2 -std=c++20 -c module_09_advanced_mechanics/06_sfinae_and_tag_dispatch.cpp",
+    "file": "/home/nimbus/repos/cpp_mastery/module_09_advanced_mechanics/06_sfinae_and_tag_dispatch.cpp"
+  },
+  {
+    "directory": "/home/nimbus/repos/cpp_mastery",
+    "command": "g++ -Wall -Wextra -Wpedantic -Wshadow -Wconversion -Wsign-conversion -Wnull-dereference -Wformat=2 -std=c++20 -c module_09_advanced_mechanics/07_crtp_pattern.cpp",
+    "file": "/home/nimbus/repos/cpp_mastery/module_09_advanced_mechanics/07_crtp_pattern.cpp"
+  },
+  {
+    "directory": "/home/nimbus/repos/cpp_mastery",
+    "command": "g++ -Wall -Wextra -Wpedantic -Wshadow -Wconversion -Wsign-conversion -Wnull-dereference -Wformat=2 -std=c++20 -c module_10_design_patterns/01_solid_principles.cpp",
+    "file": "/home/nimbus/repos/cpp_mastery/module_10_design_patterns/01_solid_principles.cpp"
+  },
+  {
+    "directory": "/home/nimbus/repos/cpp_mastery",
+    "command": "g++ -Wall -Wextra -Wpedantic -Wshadow -Wconversion -Wsign-conversion -Wnull-dereference -Wformat=2 -std=c++20 -c module_10_design_patterns/02_creational_patterns.cpp",
+    "file": "/home/nimbus/repos/cpp_mastery/module_10_design_patterns/02_creational_patterns.cpp"
+  },
+  {
+    "directory": "/home/nimbus/repos/cpp_mastery",
+    "command": "g++ -Wall -Wextra -Wpedantic -Wshadow -Wconversion -Wsign-conversion -Wnull-dereference -Wformat=2 -std=c++20 -c module_10_design_patterns/03_behavioral_patterns.cpp",
+    "file": "/home/nimbus/repos/cpp_mastery/module_10_design_patterns/03_behavioral_patterns.cpp"
+  },
+  {
+    "directory": "/home/nimbus/repos/cpp_mastery",
+    "command": "g++ -Wall -Wextra -Wpedantic -Wshadow -Wconversion -Wsign-conversion -Wnull-dereference -Wformat=2 -std=c++20 -c module_10_design_patterns/04_structural_patterns.cpp",
+    "file": "/home/nimbus/repos/cpp_mastery/module_10_design_patterns/04_structural_patterns.cpp"
+  },
+  {
+    "directory": "/home/nimbus/repos/cpp_mastery",
+    "command": "g++ -Wall -Wextra -Wpedantic -Wshadow -Wconversion -Wsign-conversion -Wnull-dereference -Wformat=2 -std=c++20 -c module_10_design_patterns/05_testable_design.cpp",
+    "file": "/home/nimbus/repos/cpp_mastery/module_10_design_patterns/05_testable_design.cpp"
+  },
+  {
+    "directory": "/home/nimbus/repos/cpp_mastery",
+    "command": "g++ -Wall -Wextra -Wpedantic -Wshadow -Wconversion -Wsign-conversion -Wnull-dereference -Wformat=2 -std=c++20 -c module_10_design_patterns/06_pattern_decision_guide.cpp",
+    "file": "/home/nimbus/repos/cpp_mastery/module_10_design_patterns/06_pattern_decision_guide.cpp"
+  },
+  {
+    "directory": "/home/nimbus/repos/cpp_mastery",
+    "command": "g++ -Wall -Wextra -Wpedantic -Wshadow -Wconversion -Wsign-conversion -Wnull-dereference -Wformat=2 -std=c++20 -c module_11_embedded_systems/01_volatile_hardware.cpp",
+    "file": "/home/nimbus/repos/cpp_mastery/module_11_embedded_systems/01_volatile_hardware.cpp"
+  },
+  {
+    "directory": "/home/nimbus/repos/cpp_mastery",
+    "command": "g++ -Wall -Wextra -Wpedantic -Wshadow -Wconversion -Wsign-conversion -Wnull-dereference -Wformat=2 -std=c++20 -c module_11_embedded_systems/02_bitfields_protocols.cpp",
+    "file": "/home/nimbus/repos/cpp_mastery/module_11_embedded_systems/02_bitfields_protocols.cpp"
+  },
+  {
+    "directory": "/home/nimbus/repos/cpp_mastery",
+    "command": "g++ -Wall -Wextra -Wpedantic -Wshadow -Wconversion -Wsign-conversion -Wnull-dereference -Wformat=2 -std=c++20 -c module_11_embedded_systems/03_embedded_constraints.cpp",
+    "file": "/home/nimbus/repos/cpp_mastery/module_11_embedded_systems/03_embedded_constraints.cpp"
+  },
+  {
+    "directory": "/home/nimbus/repos/cpp_mastery",
+    "command": "g++ -Wall -Wextra -Wpedantic -Wshadow -Wconversion -Wsign-conversion -Wnull-dereference -Wformat=2 -std=c++20 -pthread -c module_11_embedded_systems/04_rtos_concurrency.cpp",
+    "file": "/home/nimbus/repos/cpp_mastery/module_11_embedded_systems/04_rtos_concurrency.cpp"
+  },
+  {
+    "directory": "/home/nimbus/repos/cpp_mastery",
+    "command": "g++ -Wall -Wextra -Wpedantic -Wshadow -Wconversion -Wsign-conversion -Wnull-dereference -Wformat=2 -std=c++20 -pthread -c module_11_embedded_systems/05_advanced_parallelism.cpp",
+    "file": "/home/nimbus/repos/cpp_mastery/module_11_embedded_systems/05_advanced_parallelism.cpp"
+  }
+]
