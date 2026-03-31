@@ -1,0 +1,577 @@
+[
+  {
+    "directory": "/home/nimbus/repos/cpp_mastery_source",
+    "command": "g++ -std=c++20 -Wall -Wextra -Wpedantic -Wshadow -Wconversion -Wsign-conversion -Wnull-dereference -Wformat=2 -c main.cpp -o main.o",
+    "file": "main.cpp"
+  },
+  {
+    "directory": "/home/nimbus/repos/cpp_mastery_source",
+    "command": "g++ -std=c++20 -Wall -Wextra -Wpedantic -Wshadow -Wconversion -Wsign-conversion -Wnull-dereference -Wformat=2 -c module_01_basics/01_variables_and_memory.cpp -o module_01_basics/01_variables_and_memory.o",
+    "file": "module_01_basics/01_variables_and_memory.cpp"
+  },
+  {
+    "directory": "/home/nimbus/repos/cpp_mastery_source",
+    "command": "g++ -std=c++20 -Wall -Wextra -Wpedantic -Wshadow -Wconversion -Wsign-conversion -Wnull-dereference -Wformat=2 -c module_01_basics/02_pointers_and_references.cpp -o module_01_basics/02_pointers_and_references.o",
+    "file": "module_01_basics/02_pointers_and_references.cpp"
+  },
+  {
+    "directory": "/home/nimbus/repos/cpp_mastery_source",
+    "command": "g++ -std=c++20 -Wall -Wextra -Wpedantic -Wshadow -Wconversion -Wsign-conversion -Wnull-dereference -Wformat=2 -c module_01_basics/03_functions_and_overloading.cpp -o module_01_basics/03_functions_and_overloading.o",
+    "file": "module_01_basics/03_functions_and_overloading.cpp"
+  },
+  {
+    "directory": "/home/nimbus/repos/cpp_mastery_source",
+    "command": "g++ -std=c++20 -Wall -Wextra -Wpedantic -Wshadow -Wconversion -Wsign-conversion -Wnull-dereference -Wformat=2 -c module_01_basics/04_operators_and_expressions.cpp -o module_01_basics/04_operators_and_expressions.o",
+    "file": "module_01_basics/04_operators_and_expressions.cpp"
+  },
+  {
+    "directory": "/home/nimbus/repos/cpp_mastery_source",
+    "command": "g++ -std=c++20 -Wall -Wextra -Wpedantic -Wshadow -Wconversion -Wsign-conversion -Wnull-dereference -Wformat=2 -c module_01_basics/05_control_flow_deepdive.cpp -o module_01_basics/05_control_flow_deepdive.o",
+    "file": "module_01_basics/05_control_flow_deepdive.cpp"
+  },
+  {
+    "directory": "/home/nimbus/repos/cpp_mastery_source",
+    "command": "g++ -std=c++20 -Wall -Wextra -Wpedantic -Wshadow -Wconversion -Wsign-conversion -Wnull-dereference -Wformat=2 -c module_01_basics/06_strings_and_arrays.cpp -o module_01_basics/06_strings_and_arrays.o",
+    "file": "module_01_basics/06_strings_and_arrays.cpp"
+  },
+  {
+    "directory": "/home/nimbus/repos/cpp_mastery_source",
+    "command": "g++ -std=c++20 -Wall -Wextra -Wpedantic -Wshadow -Wconversion -Wsign-conversion -Wnull-dereference -Wformat=2 -c module_01_basics/07_enums_type_conversions.cpp -o module_01_basics/07_enums_type_conversions.o",
+    "file": "module_01_basics/07_enums_type_conversions.cpp"
+  },
+  {
+    "directory": "/home/nimbus/repos/cpp_mastery_source",
+    "command": "g++ -std=c++20 -Wall -Wextra -Wpedantic -Wshadow -Wconversion -Wsign-conversion -Wnull-dereference -Wformat=2 -c module_01_basics/08_file_io_and_streams.cpp -o module_01_basics/08_file_io_and_streams.o",
+    "file": "module_01_basics/08_file_io_and_streams.cpp"
+  },
+  {
+    "directory": "/home/nimbus/repos/cpp_mastery_source",
+    "command": "g++ -std=c++20 -Wall -Wextra -Wpedantic -Wshadow -Wconversion -Wsign-conversion -Wnull-dereference -Wformat=2 -c module_01_basics/09_scope_namespace_recursion.cpp -o module_01_basics/09_scope_namespace_recursion.o",
+    "file": "module_01_basics/09_scope_namespace_recursion.cpp"
+  },
+  {
+    "directory": "/home/nimbus/repos/cpp_mastery_source",
+    "command": "g++ -std=c++20 -Wall -Wextra -Wpedantic -Wshadow -Wconversion -Wsign-conversion -Wnull-dereference -Wformat=2 -c module_01_basics/10_filesystem_and_binary_io.cpp -o module_01_basics/10_filesystem_and_binary_io.o",
+    "file": "module_01_basics/10_filesystem_and_binary_io.cpp"
+  },
+  {
+    "directory": "/home/nimbus/repos/cpp_mastery_source",
+    "command": "g++ -std=c++20 -Wall -Wextra -Wpedantic -Wshadow -Wconversion -Wsign-conversion -Wnull-dereference -Wformat=2 -c module_02_oop/01_classes_objects.cpp -o module_02_oop/01_classes_objects.o",
+    "file": "module_02_oop/01_classes_objects.cpp"
+  },
+  {
+    "directory": "/home/nimbus/repos/cpp_mastery_source",
+    "command": "g++ -std=c++20 -Wall -Wextra -Wpedantic -Wshadow -Wconversion -Wsign-conversion -Wnull-dereference -Wformat=2 -c module_02_oop/02_inheritance_polymorphism.cpp -o module_02_oop/02_inheritance_polymorphism.o",
+    "file": "module_02_oop/02_inheritance_polymorphism.cpp"
+  },
+  {
+    "directory": "/home/nimbus/repos/cpp_mastery_source",
+    "command": "g++ -std=c++20 -Wall -Wextra -Wpedantic -Wshadow -Wconversion -Wsign-conversion -Wnull-dereference -Wformat=2 -c module_02_oop/03_rule_of_three_five.cpp -o module_02_oop/03_rule_of_three_five.o",
+    "file": "module_02_oop/03_rule_of_three_five.cpp"
+  },
+  {
+    "directory": "/home/nimbus/repos/cpp_mastery_source",
+    "command": "g++ -std=c++20 -Wall -Wextra -Wpedantic -Wshadow -Wconversion -Wsign-conversion -Wnull-dereference -Wformat=2 -c module_02_oop/04_multiple_inheritance.cpp -o module_02_oop/04_multiple_inheritance.o",
+    "file": "module_02_oop/04_multiple_inheritance.cpp"
+  },
+  {
+    "directory": "/home/nimbus/repos/cpp_mastery_source",
+    "command": "g++ -std=c++20 -Wall -Wextra -Wpedantic -Wshadow -Wconversion -Wsign-conversion -Wnull-dereference -Wformat=2 -c module_02_oop/05_encapsulation_abstraction.cpp -o module_02_oop/05_encapsulation_abstraction.o",
+    "file": "module_02_oop/05_encapsulation_abstraction.cpp"
+  },
+  {
+    "directory": "/home/nimbus/repos/cpp_mastery_source",
+    "command": "g++ -std=c++20 -Wall -Wextra -Wpedantic -Wshadow -Wconversion -Wsign-conversion -Wnull-dereference -Wformat=2 -c module_02_oop/06_static_and_friends.cpp -o module_02_oop/06_static_and_friends.o",
+    "file": "module_02_oop/06_static_and_friends.cpp"
+  },
+  {
+    "directory": "/home/nimbus/repos/cpp_mastery_source",
+    "command": "g++ -std=c++20 -Wall -Wextra -Wpedantic -Wshadow -Wconversion -Wsign-conversion -Wnull-dereference -Wformat=2 -c module_02_oop/07_nested_and_local_classes.cpp -o module_02_oop/07_nested_and_local_classes.o",
+    "file": "module_02_oop/07_nested_and_local_classes.cpp"
+  },
+  {
+    "directory": "/home/nimbus/repos/cpp_mastery_source",
+    "command": "g++ -std=c++20 -Wall -Wextra -Wpedantic -Wshadow -Wconversion -Wsign-conversion -Wnull-dereference -Wformat=2 -c module_02_oop/08_rtti_typeid.cpp -o module_02_oop/08_rtti_typeid.o",
+    "file": "module_02_oop/08_rtti_typeid.cpp"
+  },
+  {
+    "directory": "/home/nimbus/repos/cpp_mastery_source",
+    "command": "g++ -std=c++20 -Wall -Wextra -Wpedantic -Wshadow -Wconversion -Wsign-conversion -Wnull-dereference -Wformat=2 -c module_03_modern_cpp/01_smart_pointers.cpp -o module_03_modern_cpp/01_smart_pointers.o",
+    "file": "module_03_modern_cpp/01_smart_pointers.cpp"
+  },
+  {
+    "directory": "/home/nimbus/repos/cpp_mastery_source",
+    "command": "g++ -std=c++20 -Wall -Wextra -Wpedantic -Wshadow -Wconversion -Wsign-conversion -Wnull-dereference -Wformat=2 -c module_03_modern_cpp/02_lambdas.cpp -o module_03_modern_cpp/02_lambdas.o",
+    "file": "module_03_modern_cpp/02_lambdas.cpp"
+  },
+  {
+    "directory": "/home/nimbus/repos/cpp_mastery_source",
+    "command": "g++ -std=c++20 -Wall -Wextra -Wpedantic -Wshadow -Wconversion -Wsign-conversion -Wnull-dereference -Wformat=2 -c module_03_modern_cpp/03_move_semantics_rvalue.cpp -o module_03_modern_cpp/03_move_semantics_rvalue.o",
+    "file": "module_03_modern_cpp/03_move_semantics_rvalue.cpp"
+  },
+  {
+    "directory": "/home/nimbus/repos/cpp_mastery_source",
+    "command": "g++ -std=c++20 -Wall -Wextra -Wpedantic -Wshadow -Wconversion -Wsign-conversion -Wnull-dereference -Wformat=2 -c module_03_modern_cpp/04_modern_types.cpp -o module_03_modern_cpp/04_modern_types.o",
+    "file": "module_03_modern_cpp/04_modern_types.cpp"
+  },
+  {
+    "directory": "/home/nimbus/repos/cpp_mastery_source",
+    "command": "g++ -std=c++20 -Wall -Wextra -Wpedantic -Wshadow -Wconversion -Wsign-conversion -Wnull-dereference -Wformat=2 -c module_03_modern_cpp/05_structured_bindings_optional.cpp -o module_03_modern_cpp/05_structured_bindings_optional.o",
+    "file": "module_03_modern_cpp/05_structured_bindings_optional.cpp"
+  },
+  {
+    "directory": "/home/nimbus/repos/cpp_mastery_source",
+    "command": "g++ -std=c++23 -Wall -Wextra -Wpedantic -Wshadow -Wconversion -Wsign-conversion -Wnull-dereference -Wformat=2 -c module_03_modern_cpp/06_cpp23_features.cpp -o module_03_modern_cpp/06_cpp23_features.o",
+    "file": "module_03_modern_cpp/06_cpp23_features.cpp"
+  },
+  {
+    "directory": "/home/nimbus/repos/cpp_mastery_source",
+    "command": "g++ -std=c++20 -Wall -Wextra -Wpedantic -Wshadow -Wconversion -Wsign-conversion -Wnull-dereference -Wformat=2 -c module_04_advanced/01_templates_stl.cpp -o module_04_advanced/01_templates_stl.o",
+    "file": "module_04_advanced/01_templates_stl.cpp"
+  },
+  {
+    "directory": "/home/nimbus/repos/cpp_mastery_source",
+    "command": "g++ -std=c++20 -Wall -Wextra -Wpedantic -Wshadow -Wconversion -Wsign-conversion -Wnull-dereference -Wformat=2 -c module_04_advanced/02_functors_callbacks.cpp -o module_04_advanced/02_functors_callbacks.o",
+    "file": "module_04_advanced/02_functors_callbacks.cpp"
+  },
+  {
+    "directory": "/home/nimbus/repos/cpp_mastery_source",
+    "command": "g++ -std=c++20 -Wall -Wextra -Wpedantic -Wshadow -Wconversion -Wsign-conversion -Wnull-dereference -Wformat=2 -c module_04_advanced/03_stl_containers_deepdive.cpp -o module_04_advanced/03_stl_containers_deepdive.o",
+    "file": "module_04_advanced/03_stl_containers_deepdive.cpp"
+  },
+  {
+    "directory": "/home/nimbus/repos/cpp_mastery_source",
+    "command": "g++ -std=c++20 -Wall -Wextra -Wpedantic -Wshadow -Wconversion -Wsign-conversion -Wnull-dereference -Wformat=2 -c module_04_advanced/04_iterators_and_adaptors.cpp -o module_04_advanced/04_iterators_and_adaptors.o",
+    "file": "module_04_advanced/04_iterators_and_adaptors.cpp"
+  },
+  {
+    "directory": "/home/nimbus/repos/cpp_mastery_source",
+    "command": "g++ -std=c++20 -Wall -Wextra -Wpedantic -Wshadow -Wconversion -Wsign-conversion -Wnull-dereference -Wformat=2 -c module_04_advanced/05_algorithms_masterclass.cpp -o module_04_advanced/05_algorithms_masterclass.o",
+    "file": "module_04_advanced/05_algorithms_masterclass.cpp"
+  },
+  {
+    "directory": "/home/nimbus/repos/cpp_mastery_source",
+    "command": "g++ -std=c++20 -Wall -Wextra -Wpedantic -Wshadow -Wconversion -Wsign-conversion -Wnull-dereference -Wformat=2 -c module_04_advanced/06_associative_containers.cpp -o module_04_advanced/06_associative_containers.o",
+    "file": "module_04_advanced/06_associative_containers.cpp"
+  },
+  {
+    "directory": "/home/nimbus/repos/cpp_mastery_source",
+    "command": "g++ -std=c++20 -Wall -Wextra -Wpedantic -Wshadow -Wconversion -Wsign-conversion -Wnull-dereference -Wformat=2 -c module_04_advanced/07_string_operations.cpp -o module_04_advanced/07_string_operations.o",
+    "file": "module_04_advanced/07_string_operations.cpp"
+  },
+  {
+    "directory": "/home/nimbus/repos/cpp_mastery_source",
+    "command": "g++ -std=c++20 -Wall -Wextra -Wpedantic -Wshadow -Wconversion -Wsign-conversion -Wnull-dereference -Wformat=2 -c module_04_advanced/08_ranges_and_views.cpp -o module_04_advanced/08_ranges_and_views.o",
+    "file": "module_04_advanced/08_ranges_and_views.cpp"
+  },
+  {
+    "directory": "/home/nimbus/repos/cpp_mastery_source",
+    "command": "g++ -std=c++20 -Wall -Wextra -Wpedantic -Wshadow -Wconversion -Wsign-conversion -Wnull-dereference -Wformat=2 -c module_04_advanced/09_json_and_serialization.cpp -o module_04_advanced/09_json_and_serialization.o",
+    "file": "module_04_advanced/09_json_and_serialization.cpp"
+  },
+  {
+    "directory": "/home/nimbus/repos/cpp_mastery_source",
+    "command": "g++ -std=c++20 -Wall -Wextra -Wpedantic -Wshadow -Wconversion -Wsign-conversion -Wnull-dereference -Wformat=2 -c module_05_certification/01_undefined_behavior.cpp -o module_05_certification/01_undefined_behavior.o",
+    "file": "module_05_certification/01_undefined_behavior.cpp"
+  },
+  {
+    "directory": "/home/nimbus/repos/cpp_mastery_source",
+    "command": "g++ -std=c++20 -Wall -Wextra -Wpedantic -Wshadow -Wconversion -Wsign-conversion -Wnull-dereference -Wformat=2 -c module_05_certification/02_object_slicing_virtual.cpp -o module_05_certification/02_object_slicing_virtual.o",
+    "file": "module_05_certification/02_object_slicing_virtual.cpp"
+  },
+  {
+    "directory": "/home/nimbus/repos/cpp_mastery_source",
+    "command": "g++ -std=c++20 -Wall -Wextra -Wpedantic -Wshadow -Wconversion -Wsign-conversion -Wnull-dereference -Wformat=2 -c module_05_certification/03_type_casting.cpp -o module_05_certification/03_type_casting.o",
+    "file": "module_05_certification/03_type_casting.cpp"
+  },
+  {
+    "directory": "/home/nimbus/repos/cpp_mastery_source",
+    "command": "g++ -std=c++20 -Wall -Wextra -Wpedantic -Wshadow -Wconversion -Wsign-conversion -Wnull-dereference -Wformat=2 -c module_05_certification/04_exceptions_handling.cpp -o module_05_certification/04_exceptions_handling.o",
+    "file": "module_05_certification/04_exceptions_handling.cpp"
+  },
+  {
+    "directory": "/home/nimbus/repos/cpp_mastery_source",
+    "command": "g++ -std=c++20 -Wall -Wextra -Wpedantic -Wshadow -Wconversion -Wsign-conversion -Wnull-dereference -Wformat=2 -c module_05_certification/05_const_correctness.cpp -o module_05_certification/05_const_correctness.o",
+    "file": "module_05_certification/05_const_correctness.cpp"
+  },
+  {
+    "directory": "/home/nimbus/repos/cpp_mastery_source",
+    "command": "g++ -std=c++20 -Wall -Wextra -Wpedantic -Wshadow -Wconversion -Wsign-conversion -Wnull-dereference -Wformat=2 -c module_05_certification/06_interview_gotchas.cpp -o module_05_certification/06_interview_gotchas.o",
+    "file": "module_05_certification/06_interview_gotchas.cpp"
+  },
+  {
+    "directory": "/home/nimbus/repos/cpp_mastery_source",
+    "command": "g++ -std=c++20 -Wall -Wextra -Wpedantic -Wshadow -Wconversion -Wsign-conversion -Wnull-dereference -Wformat=2 -c module_05_certification/07_error_handling_advanced.cpp -o module_05_certification/07_error_handling_advanced.o",
+    "file": "module_05_certification/07_error_handling_advanced.cpp"
+  },
+  {
+    "directory": "/home/nimbus/repos/cpp_mastery_source",
+    "command": "g++ -std=c++20 -Wall -Wextra -Wpedantic -Wshadow -Wconversion -Wsign-conversion -Wnull-dereference -Wformat=2 -c module_06_industry_standards/01_concurrency_threads.cpp -o module_06_industry_standards/01_concurrency_threads.o",
+    "file": "module_06_industry_standards/01_concurrency_threads.cpp"
+  },
+  {
+    "directory": "/home/nimbus/repos/cpp_mastery_source",
+    "command": "g++ -std=c++20 -Wall -Wextra -Wpedantic -Wshadow -Wconversion -Wsign-conversion -Wnull-dereference -Wformat=2 -c module_06_industry_standards/03_unit_testing_gtest.cpp -o module_06_industry_standards/03_unit_testing_gtest.o",
+    "file": "module_06_industry_standards/03_unit_testing_gtest.cpp"
+  },
+  {
+    "directory": "/home/nimbus/repos/cpp_mastery_source",
+    "command": "g++ -std=c++20 -Wall -Wextra -Wpedantic -Wshadow -Wconversion -Wsign-conversion -Wnull-dereference -Wformat=2 -c module_06_industry_standards/04_valgrind_profiling.cpp -o module_06_industry_standards/04_valgrind_profiling.o",
+    "file": "module_06_industry_standards/04_valgrind_profiling.cpp"
+  },
+  {
+    "directory": "/home/nimbus/repos/cpp_mastery_source",
+    "command": "g++ -std=c++20 -Wall -Wextra -Wpedantic -Wshadow -Wconversion -Wsign-conversion -Wnull-dereference -Wformat=2 -c module_06_industry_standards/05_async_futures.cpp -o module_06_industry_standards/05_async_futures.o",
+    "file": "module_06_industry_standards/05_async_futures.cpp"
+  },
+  {
+    "directory": "/home/nimbus/repos/cpp_mastery_source",
+    "command": "g++ -std=c++20 -Wall -Wextra -Wpedantic -Wshadow -Wconversion -Wsign-conversion -Wnull-dereference -Wformat=2 -c module_06_industry_standards/06_debugging_techniques.cpp -o module_06_industry_standards/06_debugging_techniques.o",
+    "file": "module_06_industry_standards/06_debugging_techniques.cpp"
+  },
+  {
+    "directory": "/home/nimbus/repos/cpp_mastery_source",
+    "command": "g++ -std=c++20 -Wall -Wextra -Wpedantic -Wshadow -Wconversion -Wsign-conversion -Wnull-dereference -Wformat=2 -c module_06_industry_standards/09_mutex_lock_deepdive.cpp -o module_06_industry_standards/09_mutex_lock_deepdive.o",
+    "file": "module_06_industry_standards/09_mutex_lock_deepdive.cpp"
+  },
+  {
+    "directory": "/home/nimbus/repos/cpp_mastery_source",
+    "command": "g++ -std=c++20 -Wall -Wextra -Wpedantic -Wshadow -Wconversion -Wsign-conversion -Wnull-dereference -Wformat=2 -c module_06_industry_standards/10_advanced_logging.cpp -o module_06_industry_standards/10_advanced_logging.o",
+    "file": "module_06_industry_standards/10_advanced_logging.cpp"
+  },
+  {
+    "directory": "/home/nimbus/repos/cpp_mastery_source",
+    "command": "g++ -std=c++20 -Wall -Wextra -Wpedantic -Wshadow -Wconversion -Wsign-conversion -Wnull-dereference -Wformat=2 -c module_06_industry_standards/11_gtest_advanced.cpp -o module_06_industry_standards/11_gtest_advanced.o",
+    "file": "module_06_industry_standards/11_gtest_advanced.cpp"
+  },
+  {
+    "directory": "/home/nimbus/repos/cpp_mastery_source",
+    "command": "g++ -std=c++20 -Wall -Wextra -Wpedantic -Wshadow -Wconversion -Wsign-conversion -Wnull-dereference -Wformat=2 -c module_07_under_the_hood/01_vtable_memory_layout.cpp -o module_07_under_the_hood/01_vtable_memory_layout.o",
+    "file": "module_07_under_the_hood/01_vtable_memory_layout.cpp"
+  },
+  {
+    "directory": "/home/nimbus/repos/cpp_mastery_source",
+    "command": "g++ -std=c++20 -Wall -Wextra -Wpedantic -Wshadow -Wconversion -Wsign-conversion -Wnull-dereference -Wformat=2 -c module_07_under_the_hood/02_sigsegv_and_raii.cpp -o module_07_under_the_hood/02_sigsegv_and_raii.o",
+    "file": "module_07_under_the_hood/02_sigsegv_and_raii.cpp"
+  },
+  {
+    "directory": "/home/nimbus/repos/cpp_mastery_source",
+    "command": "g++ -std=c++20 -Wall -Wextra -Wpedantic -Wshadow -Wconversion -Wsign-conversion -Wnull-dereference -Wformat=2 -c module_07_under_the_hood/03_fork_vs_thread_pool.cpp -o module_07_under_the_hood/03_fork_vs_thread_pool.o",
+    "file": "module_07_under_the_hood/03_fork_vs_thread_pool.cpp"
+  },
+  {
+    "directory": "/home/nimbus/repos/cpp_mastery_source",
+    "command": "g++ -std=c++20 -Wall -Wextra -Wpedantic -Wshadow -Wconversion -Wsign-conversion -Wnull-dereference -Wformat=2 -c module_07_under_the_hood/04_memory_model_and_cache.cpp -o module_07_under_the_hood/04_memory_model_and_cache.o",
+    "file": "module_07_under_the_hood/04_memory_model_and_cache.cpp"
+  },
+  {
+    "directory": "/home/nimbus/repos/cpp_mastery_source",
+    "command": "g++ -std=c++20 -Wall -Wextra -Wpedantic -Wshadow -Wconversion -Wsign-conversion -Wnull-dereference -Wformat=2 -c module_07_under_the_hood/05_compilation_pipeline.cpp -o module_07_under_the_hood/05_compilation_pipeline.o",
+    "file": "module_07_under_the_hood/05_compilation_pipeline.cpp"
+  },
+  {
+    "directory": "/home/nimbus/repos/cpp_mastery_source",
+    "command": "g++ -std=c++20 -Wall -Wextra -Wpedantic -Wshadow -Wconversion -Wsign-conversion -Wnull-dereference -Wformat=2 -c module_07_under_the_hood/06_abi_and_name_mangling.cpp -o module_07_under_the_hood/06_abi_and_name_mangling.o",
+    "file": "module_07_under_the_hood/06_abi_and_name_mangling.cpp"
+  },
+  {
+    "directory": "/home/nimbus/repos/cpp_mastery_source",
+    "command": "g++ -std=c++20 -Wall -Wextra -Wpedantic -Wshadow -Wconversion -Wsign-conversion -Wnull-dereference -Wformat=2 -c module_07_under_the_hood/07_inline_assembly.cpp -o module_07_under_the_hood/07_inline_assembly.o",
+    "file": "module_07_under_the_hood/07_inline_assembly.cpp"
+  },
+  {
+    "directory": "/home/nimbus/repos/cpp_mastery_source",
+    "command": "g++ -std=c++20 -Wall -Wextra -Wpedantic -Wshadow -Wconversion -Wsign-conversion -Wnull-dereference -Wformat=2 -c module_07_under_the_hood/08_simd_intrinsics.cpp -o module_07_under_the_hood/08_simd_intrinsics.o",
+    "file": "module_07_under_the_hood/08_simd_intrinsics.cpp"
+  },
+  {
+    "directory": "/home/nimbus/repos/cpp_mastery_source",
+    "command": "g++ -std=c++20 -Wall -Wextra -Wpedantic -Wshadow -Wconversion -Wsign-conversion -Wnull-dereference -Wformat=2 -c module_07_under_the_hood/09_cpp20_modules.cpp -o module_07_under_the_hood/09_cpp20_modules.o",
+    "file": "module_07_under_the_hood/09_cpp20_modules.cpp"
+  },
+  {
+    "directory": "/home/nimbus/repos/cpp_mastery_source",
+    "command": "g++ -std=c++20 -Wall -Wextra -Wpedantic -Wshadow -Wconversion -Wsign-conversion -Wnull-dereference -Wformat=2 -c module_07_under_the_hood/10_linking_deepdive.cpp -o module_07_under_the_hood/10_linking_deepdive.o",
+    "file": "module_07_under_the_hood/10_linking_deepdive.cpp"
+  },
+  {
+    "directory": "/home/nimbus/repos/cpp_mastery_source",
+    "command": "g++ -std=c++20 -Wall -Wextra -Wpedantic -Wshadow -Wconversion -Wsign-conversion -Wnull-dereference -Wformat=2 -c module_07_under_the_hood/11_low_level_optimization.cpp -o module_07_under_the_hood/11_low_level_optimization.o",
+    "file": "module_07_under_the_hood/11_low_level_optimization.cpp"
+  },
+  {
+    "directory": "/home/nimbus/repos/cpp_mastery_source",
+    "command": "g++ -std=c++20 -Wall -Wextra -Wpedantic -Wshadow -Wconversion -Wsign-conversion -Wnull-dereference -Wformat=2 -c module_08_core_guidelines/01_philosophy_and_interfaces.cpp -o module_08_core_guidelines/01_philosophy_and_interfaces.o",
+    "file": "module_08_core_guidelines/01_philosophy_and_interfaces.cpp"
+  },
+  {
+    "directory": "/home/nimbus/repos/cpp_mastery_source",
+    "command": "g++ -std=c++20 -Wall -Wextra -Wpedantic -Wshadow -Wconversion -Wsign-conversion -Wnull-dereference -Wformat=2 -c module_08_core_guidelines/02_resource_management_rule_of_zero.cpp -o module_08_core_guidelines/02_resource_management_rule_of_zero.o",
+    "file": "module_08_core_guidelines/02_resource_management_rule_of_zero.cpp"
+  },
+  {
+    "directory": "/home/nimbus/repos/cpp_mastery_source",
+    "command": "g++ -std=c++20 -Wall -Wextra -Wpedantic -Wshadow -Wconversion -Wsign-conversion -Wnull-dereference -Wformat=2 -c module_08_core_guidelines/03_error_handling.cpp -o module_08_core_guidelines/03_error_handling.o",
+    "file": "module_08_core_guidelines/03_error_handling.cpp"
+  },
+  {
+    "directory": "/home/nimbus/repos/cpp_mastery_source",
+    "command": "g++ -std=c++20 -Wall -Wextra -Wpedantic -Wshadow -Wconversion -Wsign-conversion -Wnull-dereference -Wformat=2 -c module_08_core_guidelines/04_concurrency_and_performance.cpp -o module_08_core_guidelines/04_concurrency_and_performance.o",
+    "file": "module_08_core_guidelines/04_concurrency_and_performance.cpp"
+  },
+  {
+    "directory": "/home/nimbus/repos/cpp_mastery_source",
+    "command": "g++ -std=c++20 -Wall -Wextra -Wpedantic -Wshadow -Wconversion -Wsign-conversion -Wnull-dereference -Wformat=2 -c module_08_core_guidelines/05_smart_pointer_guidelines.cpp -o module_08_core_guidelines/05_smart_pointer_guidelines.o",
+    "file": "module_08_core_guidelines/05_smart_pointer_guidelines.cpp"
+  },
+  {
+    "directory": "/home/nimbus/repos/cpp_mastery_source",
+    "command": "g++ -std=c++20 -Wall -Wextra -Wpedantic -Wshadow -Wconversion -Wsign-conversion -Wnull-dereference -Wformat=2 -c module_08_core_guidelines/06_class_design_guidelines.cpp -o module_08_core_guidelines/06_class_design_guidelines.o",
+    "file": "module_08_core_guidelines/06_class_design_guidelines.cpp"
+  },
+  {
+    "directory": "/home/nimbus/repos/cpp_mastery_source",
+    "command": "g++ -std=c++20 -Wall -Wextra -Wpedantic -Wshadow -Wconversion -Wsign-conversion -Wnull-dereference -Wformat=2 -c module_08_core_guidelines/07_api_design.cpp -o module_08_core_guidelines/07_api_design.o",
+    "file": "module_08_core_guidelines/07_api_design.cpp"
+  },
+  {
+    "directory": "/home/nimbus/repos/cpp_mastery_source",
+    "command": "g++ -std=c++20 -Wall -Wextra -Wpedantic -Wshadow -Wconversion -Wsign-conversion -Wnull-dereference -Wformat=2 -c module_08_core_guidelines/08_maintainable_cpp.cpp -o module_08_core_guidelines/08_maintainable_cpp.o",
+    "file": "module_08_core_guidelines/08_maintainable_cpp.cpp"
+  },
+  {
+    "directory": "/home/nimbus/repos/cpp_mastery_source",
+    "command": "g++ -std=c++20 -Wall -Wextra -Wpedantic -Wshadow -Wconversion -Wsign-conversion -Wnull-dereference -Wformat=2 -c module_09_advanced_mechanics/01_bit_manipulation_and_alignment.cpp -o module_09_advanced_mechanics/01_bit_manipulation_and_alignment.o",
+    "file": "module_09_advanced_mechanics/01_bit_manipulation_and_alignment.cpp"
+  },
+  {
+    "directory": "/home/nimbus/repos/cpp_mastery_source",
+    "command": "g++ -std=c++20 -Wall -Wextra -Wpedantic -Wshadow -Wconversion -Wsign-conversion -Wnull-dereference -Wformat=2 -c module_09_advanced_mechanics/02_operator_overloading.cpp -o module_09_advanced_mechanics/02_operator_overloading.o",
+    "file": "module_09_advanced_mechanics/02_operator_overloading.cpp"
+  },
+  {
+    "directory": "/home/nimbus/repos/cpp_mastery_source",
+    "command": "g++ -std=c++20 -Wall -Wextra -Wpedantic -Wshadow -Wconversion -Wsign-conversion -Wnull-dereference -Wformat=2 -c module_09_advanced_mechanics/03_advanced_pointers.cpp -o module_09_advanced_mechanics/03_advanced_pointers.o",
+    "file": "module_09_advanced_mechanics/03_advanced_pointers.cpp"
+  },
+  {
+    "directory": "/home/nimbus/repos/cpp_mastery_source",
+    "command": "g++ -std=c++20 -Wall -Wextra -Wpedantic -Wshadow -Wconversion -Wsign-conversion -Wnull-dereference -Wformat=2 -c module_09_advanced_mechanics/04_constant_evaluation.cpp -o module_09_advanced_mechanics/04_constant_evaluation.o",
+    "file": "module_09_advanced_mechanics/04_constant_evaluation.cpp"
+  },
+  {
+    "directory": "/home/nimbus/repos/cpp_mastery_source",
+    "command": "g++ -std=c++20 -Wall -Wextra -Wpedantic -Wshadow -Wconversion -Wsign-conversion -Wnull-dereference -Wformat=2 -c module_09_advanced_mechanics/05_type_traits_and_concepts.cpp -o module_09_advanced_mechanics/05_type_traits_and_concepts.o",
+    "file": "module_09_advanced_mechanics/05_type_traits_and_concepts.cpp"
+  },
+  {
+    "directory": "/home/nimbus/repos/cpp_mastery_source",
+    "command": "g++ -std=c++20 -Wall -Wextra -Wpedantic -Wshadow -Wconversion -Wsign-conversion -Wnull-dereference -Wformat=2 -c module_09_advanced_mechanics/06_sfinae_and_tag_dispatch.cpp -o module_09_advanced_mechanics/06_sfinae_and_tag_dispatch.o",
+    "file": "module_09_advanced_mechanics/06_sfinae_and_tag_dispatch.cpp"
+  },
+  {
+    "directory": "/home/nimbus/repos/cpp_mastery_source",
+    "command": "g++ -std=c++20 -Wall -Wextra -Wpedantic -Wshadow -Wconversion -Wsign-conversion -Wnull-dereference -Wformat=2 -c module_09_advanced_mechanics/07_crtp_pattern.cpp -o module_09_advanced_mechanics/07_crtp_pattern.o",
+    "file": "module_09_advanced_mechanics/07_crtp_pattern.cpp"
+  },
+  {
+    "directory": "/home/nimbus/repos/cpp_mastery_source",
+    "command": "g++ -std=c++20 -Wall -Wextra -Wpedantic -Wshadow -Wconversion -Wsign-conversion -Wnull-dereference -Wformat=2 -c module_09_advanced_mechanics/08_template_metaprogramming.cpp -o module_09_advanced_mechanics/08_template_metaprogramming.o",
+    "file": "module_09_advanced_mechanics/08_template_metaprogramming.cpp"
+  },
+  {
+    "directory": "/home/nimbus/repos/cpp_mastery_source",
+    "command": "g++ -std=c++20 -Wall -Wextra -Wpedantic -Wshadow -Wconversion -Wsign-conversion -Wnull-dereference -Wformat=2 -c module_10_design_patterns/01_solid_principles.cpp -o module_10_design_patterns/01_solid_principles.o",
+    "file": "module_10_design_patterns/01_solid_principles.cpp"
+  },
+  {
+    "directory": "/home/nimbus/repos/cpp_mastery_source",
+    "command": "g++ -std=c++20 -Wall -Wextra -Wpedantic -Wshadow -Wconversion -Wsign-conversion -Wnull-dereference -Wformat=2 -c module_10_design_patterns/02_creational_patterns.cpp -o module_10_design_patterns/02_creational_patterns.o",
+    "file": "module_10_design_patterns/02_creational_patterns.cpp"
+  },
+  {
+    "directory": "/home/nimbus/repos/cpp_mastery_source",
+    "command": "g++ -std=c++20 -Wall -Wextra -Wpedantic -Wshadow -Wconversion -Wsign-conversion -Wnull-dereference -Wformat=2 -c module_10_design_patterns/03_behavioral_patterns.cpp -o module_10_design_patterns/03_behavioral_patterns.o",
+    "file": "module_10_design_patterns/03_behavioral_patterns.cpp"
+  },
+  {
+    "directory": "/home/nimbus/repos/cpp_mastery_source",
+    "command": "g++ -std=c++20 -Wall -Wextra -Wpedantic -Wshadow -Wconversion -Wsign-conversion -Wnull-dereference -Wformat=2 -c module_10_design_patterns/04_structural_patterns.cpp -o module_10_design_patterns/04_structural_patterns.o",
+    "file": "module_10_design_patterns/04_structural_patterns.cpp"
+  },
+  {
+    "directory": "/home/nimbus/repos/cpp_mastery_source",
+    "command": "g++ -std=c++20 -Wall -Wextra -Wpedantic -Wshadow -Wconversion -Wsign-conversion -Wnull-dereference -Wformat=2 -c module_10_design_patterns/05_testable_design.cpp -o module_10_design_patterns/05_testable_design.o",
+    "file": "module_10_design_patterns/05_testable_design.cpp"
+  },
+  {
+    "directory": "/home/nimbus/repos/cpp_mastery_source",
+    "command": "g++ -std=c++20 -Wall -Wextra -Wpedantic -Wshadow -Wconversion -Wsign-conversion -Wnull-dereference -Wformat=2 -c module_10_design_patterns/06_pattern_decision_guide.cpp -o module_10_design_patterns/06_pattern_decision_guide.o",
+    "file": "module_10_design_patterns/06_pattern_decision_guide.cpp"
+  },
+  {
+    "directory": "/home/nimbus/repos/cpp_mastery_source",
+    "command": "g++ -std=c++20 -Wall -Wextra -Wpedantic -Wshadow -Wconversion -Wsign-conversion -Wnull-dereference -Wformat=2 -pthread -c module_10_design_patterns/07_embedded_automotive_patterns.cpp -o module_10_design_patterns/07_embedded_automotive_patterns.o",
+    "file": "module_10_design_patterns/07_embedded_automotive_patterns.cpp"
+  },
+  {
+    "directory": "/home/nimbus/repos/cpp_mastery_source",
+    "command": "g++ -std=c++20 -Wall -Wextra -Wpedantic -Wshadow -Wconversion -Wsign-conversion -Wnull-dereference -Wformat=2 -c module_11_embedded_systems/01_volatile_hardware.cpp -o module_11_embedded_systems/01_volatile_hardware.o",
+    "file": "module_11_embedded_systems/01_volatile_hardware.cpp"
+  },
+  {
+    "directory": "/home/nimbus/repos/cpp_mastery_source",
+    "command": "g++ -std=c++20 -Wall -Wextra -Wpedantic -Wshadow -Wconversion -Wsign-conversion -Wnull-dereference -Wformat=2 -c module_11_embedded_systems/02_bitfields_protocols.cpp -o module_11_embedded_systems/02_bitfields_protocols.o",
+    "file": "module_11_embedded_systems/02_bitfields_protocols.cpp"
+  },
+  {
+    "directory": "/home/nimbus/repos/cpp_mastery_source",
+    "command": "g++ -std=c++20 -Wall -Wextra -Wpedantic -Wshadow -Wconversion -Wsign-conversion -Wnull-dereference -Wformat=2 -c module_11_embedded_systems/03_embedded_constraints.cpp -o module_11_embedded_systems/03_embedded_constraints.o",
+    "file": "module_11_embedded_systems/03_embedded_constraints.cpp"
+  },
+  {
+    "directory": "/home/nimbus/repos/cpp_mastery_source",
+    "command": "g++ -std=c++20 -Wall -Wextra -Wpedantic -Wshadow -Wconversion -Wsign-conversion -Wnull-dereference -Wformat=2 -c module_11_embedded_systems/04_rtos_concurrency.cpp -o module_11_embedded_systems/04_rtos_concurrency.o",
+    "file": "module_11_embedded_systems/04_rtos_concurrency.cpp"
+  },
+  {
+    "directory": "/home/nimbus/repos/cpp_mastery_source",
+    "command": "g++ -std=c++20 -Wall -Wextra -Wpedantic -Wshadow -Wconversion -Wsign-conversion -Wnull-dereference -Wformat=2 -c module_11_embedded_systems/05_advanced_parallelism.cpp -o module_11_embedded_systems/05_advanced_parallelism.o",
+    "file": "module_11_embedded_systems/05_advanced_parallelism.cpp"
+  },
+  {
+    "directory": "/home/nimbus/repos/cpp_mastery_source",
+    "command": "g++ -std=c++20 -Wall -Wextra -Wpedantic -Wshadow -Wconversion -Wsign-conversion -Wnull-dereference -Wformat=2 -c module_12_coroutines/01_coroutine_fundamentals.cpp -o module_12_coroutines/01_coroutine_fundamentals.o",
+    "file": "module_12_coroutines/01_coroutine_fundamentals.cpp"
+  },
+  {
+    "directory": "/home/nimbus/repos/cpp_mastery_source",
+    "command": "g++ -std=c++20 -Wall -Wextra -Wpedantic -Wshadow -Wconversion -Wsign-conversion -Wnull-dereference -Wformat=2 -c module_12_coroutines/02_async_coroutine_patterns.cpp -o module_12_coroutines/02_async_coroutine_patterns.o",
+    "file": "module_12_coroutines/02_async_coroutine_patterns.cpp"
+  },
+  {
+    "directory": "/home/nimbus/repos/cpp_mastery_source",
+    "command": "g++ -std=c++20 -Wall -Wextra -Wpedantic -Wshadow -Wconversion -Wsign-conversion -Wnull-dereference -Wformat=2 -c module_13_networking/01_socket_fundamentals.cpp -o module_13_networking/01_socket_fundamentals.o",
+    "file": "module_13_networking/01_socket_fundamentals.cpp"
+  },
+  {
+    "directory": "/home/nimbus/repos/cpp_mastery_source",
+    "command": "g++ -std=c++20 -Wall -Wextra -Wpedantic -Wshadow -Wconversion -Wsign-conversion -Wnull-dereference -Wformat=2 -c module_13_networking/02_nonblocking_io_epoll.cpp -o module_13_networking/02_nonblocking_io_epoll.o",
+    "file": "module_13_networking/02_nonblocking_io_epoll.cpp"
+  },
+  {
+    "directory": "/home/nimbus/repos/cpp_mastery_source",
+    "command": "g++ -std=c++20 -Wall -Wextra -Wpedantic -Wshadow -Wconversion -Wsign-conversion -Wnull-dereference -Wformat=2 -c module_14_automotive_networks/01_can_fd_and_xl.cpp -o module_14_automotive_networks/01_can_fd_and_xl.o",
+    "file": "module_14_automotive_networks/01_can_fd_and_xl.cpp"
+  },
+  {
+    "directory": "/home/nimbus/repos/cpp_mastery_source",
+    "command": "g++ -std=c++20 -Wall -Wextra -Wpedantic -Wshadow -Wconversion -Wsign-conversion -Wnull-dereference -Wformat=2 -c module_14_automotive_networks/02_lin_bus.cpp -o module_14_automotive_networks/02_lin_bus.o",
+    "file": "module_14_automotive_networks/02_lin_bus.cpp"
+  },
+  {
+    "directory": "/home/nimbus/repos/cpp_mastery_source",
+    "command": "g++ -std=c++20 -Wall -Wextra -Wpedantic -Wshadow -Wconversion -Wsign-conversion -Wnull-dereference -Wformat=2 -c module_14_automotive_networks/03_flexray.cpp -o module_14_automotive_networks/03_flexray.o",
+    "file": "module_14_automotive_networks/03_flexray.cpp"
+  },
+  {
+    "directory": "/home/nimbus/repos/cpp_mastery_source",
+    "command": "g++ -std=c++20 -Wall -Wextra -Wpedantic -Wshadow -Wconversion -Wsign-conversion -Wnull-dereference -Wformat=2 -c module_14_automotive_networks/04_automotive_ethernet.cpp -o module_14_automotive_networks/04_automotive_ethernet.o",
+    "file": "module_14_automotive_networks/04_automotive_ethernet.cpp"
+  },
+  {
+    "directory": "/home/nimbus/repos/cpp_mastery_source",
+    "command": "g++ -std=c++20 -Wall -Wextra -Wpedantic -Wshadow -Wconversion -Wsign-conversion -Wnull-dereference -Wformat=2 -c module_14_automotive_networks/05_inter_mcu_communication.cpp -o module_14_automotive_networks/05_inter_mcu_communication.o",
+    "file": "module_14_automotive_networks/05_inter_mcu_communication.cpp"
+  },
+  {
+    "directory": "/home/nimbus/repos/cpp_mastery_source",
+    "command": "g++ -std=c++20 -Wall -Wextra -Wpedantic -Wshadow -Wconversion -Wsign-conversion -Wnull-dereference -Wformat=2 -c module_14_automotive_networks/06_uds_diagnostics.cpp -o module_14_automotive_networks/06_uds_diagnostics.o",
+    "file": "module_14_automotive_networks/06_uds_diagnostics.cpp"
+  },
+  {
+    "directory": "/home/nimbus/repos/cpp_mastery_source",
+    "command": "g++ -std=c++20 -Wall -Wextra -Wpedantic -Wshadow -Wconversion -Wsign-conversion -Wnull-dereference -Wformat=2 -c module_15_hw_interfaces/01_gpio_and_registers.cpp -o module_15_hw_interfaces/01_gpio_and_registers.o",
+    "file": "module_15_hw_interfaces/01_gpio_and_registers.cpp"
+  },
+  {
+    "directory": "/home/nimbus/repos/cpp_mastery_source",
+    "command": "g++ -std=c++20 -Wall -Wextra -Wpedantic -Wshadow -Wconversion -Wsign-conversion -Wnull-dereference -Wformat=2 -c module_15_hw_interfaces/02_adc_dac.cpp -o module_15_hw_interfaces/02_adc_dac.o",
+    "file": "module_15_hw_interfaces/02_adc_dac.cpp"
+  },
+  {
+    "directory": "/home/nimbus/repos/cpp_mastery_source",
+    "command": "g++ -std=c++20 -Wall -Wextra -Wpedantic -Wshadow -Wconversion -Wsign-conversion -Wnull-dereference -Wformat=2 -c module_15_hw_interfaces/03_serial_protocols_deep.cpp -o module_15_hw_interfaces/03_serial_protocols_deep.o",
+    "file": "module_15_hw_interfaces/03_serial_protocols_deep.cpp"
+  },
+  {
+    "directory": "/home/nimbus/repos/cpp_mastery_source",
+    "command": "g++ -std=c++20 -Wall -Wextra -Wpedantic -Wshadow -Wconversion -Wsign-conversion -Wnull-dereference -Wformat=2 -c module_15_hw_interfaces/04_dma_and_interrupts.cpp -o module_15_hw_interfaces/04_dma_and_interrupts.o",
+    "file": "module_15_hw_interfaces/04_dma_and_interrupts.cpp"
+  },
+  {
+    "directory": "/home/nimbus/repos/cpp_mastery_source",
+    "command": "g++ -std=c++20 -Wall -Wextra -Wpedantic -Wshadow -Wconversion -Wsign-conversion -Wnull-dereference -Wformat=2 -c module_15_hw_interfaces/05_memory_types.cpp -o module_15_hw_interfaces/05_memory_types.o",
+    "file": "module_15_hw_interfaces/05_memory_types.cpp"
+  },
+  {
+    "directory": "/home/nimbus/repos/cpp_mastery_source",
+    "command": "g++ -std=c++20 -Wall -Wextra -Wpedantic -Wshadow -Wconversion -Wsign-conversion -Wnull-dereference -Wformat=2 -c module_16_autosar/01_classic_platform.cpp -o module_16_autosar/01_classic_platform.o",
+    "file": "module_16_autosar/01_classic_platform.cpp"
+  },
+  {
+    "directory": "/home/nimbus/repos/cpp_mastery_source",
+    "command": "g++ -std=c++20 -Wall -Wextra -Wpedantic -Wshadow -Wconversion -Wsign-conversion -Wnull-dereference -Wformat=2 -c module_16_autosar/02_adaptive_platform.cpp -o module_16_autosar/02_adaptive_platform.o",
+    "file": "module_16_autosar/02_adaptive_platform.cpp"
+  },
+  {
+    "directory": "/home/nimbus/repos/cpp_mastery_source",
+    "command": "g++ -std=c++20 -Wall -Wextra -Wpedantic -Wshadow -Wconversion -Wsign-conversion -Wnull-dereference -Wformat=2 -c module_16_autosar/03_functional_safety.cpp -o module_16_autosar/03_functional_safety.o",
+    "file": "module_16_autosar/03_functional_safety.cpp"
+  },
+  {
+    "directory": "/home/nimbus/repos/cpp_mastery_source",
+    "command": "g++ -std=c++20 -Wall -Wextra -Wpedantic -Wshadow -Wconversion -Wsign-conversion -Wnull-dereference -Wformat=2 -c module_16_autosar/04_automotive_cybersecurity.cpp -o module_16_autosar/04_automotive_cybersecurity.o",
+    "file": "module_16_autosar/04_automotive_cybersecurity.cpp"
+  },
+  {
+    "directory": "/home/nimbus/repos/cpp_mastery_source",
+    "command": "g++ -std=c++20 -Wall -Wextra -Wpedantic -Wshadow -Wconversion -Wsign-conversion -Wnull-dereference -Wformat=2 -c module_16_autosar/05_misra_cert_coding_standard.cpp -o module_16_autosar/05_misra_cert_coding_standard.o",
+    "file": "module_16_autosar/05_misra_cert_coding_standard.cpp"
+  },
+  {
+    "directory": "/home/nimbus/repos/cpp_mastery_source",
+    "command": "g++ -std=c++20 -Wall -Wextra -Wpedantic -Wshadow -Wconversion -Wsign-conversion -Wnull-dereference -Wformat=2 -c module_17_sdv/01_sdv_architecture.cpp -o module_17_sdv/01_sdv_architecture.o",
+    "file": "module_17_sdv/01_sdv_architecture.cpp"
+  },
+  {
+    "directory": "/home/nimbus/repos/cpp_mastery_source",
+    "command": "g++ -std=c++20 -Wall -Wextra -Wpedantic -Wshadow -Wconversion -Wsign-conversion -Wnull-dereference -Wformat=2 -c module_17_sdv/02_ota_updates.cpp -o module_17_sdv/02_ota_updates.o",
+    "file": "module_17_sdv/02_ota_updates.cpp"
+  },
+  {
+    "directory": "/home/nimbus/repos/cpp_mastery_source",
+    "command": "g++ -std=c++20 -Wall -Wextra -Wpedantic -Wshadow -Wconversion -Wsign-conversion -Wnull-dereference -Wformat=2 -c module_17_sdv/03_middleware_someip_dds.cpp -o module_17_sdv/03_middleware_someip_dds.o",
+    "file": "module_17_sdv/03_middleware_someip_dds.cpp"
+  },
+  {
+    "directory": "/home/nimbus/repos/cpp_mastery_source",
+    "command": "g++ -std=c++20 -Wall -Wextra -Wpedantic -Wshadow -Wconversion -Wsign-conversion -Wnull-dereference -Wformat=2 -c module_18_driver_development/01_driver_hal_bsp.cpp -o module_18_driver_development/01_driver_hal_bsp.o",
+    "file": "module_18_driver_development/01_driver_hal_bsp.cpp"
+  },
+  {
+    "directory": "/home/nimbus/repos/cpp_mastery_source",
+    "command": "g++ -std=c++20 -Wall -Wextra -Wpedantic -Wshadow -Wconversion -Wsign-conversion -Wnull-dereference -Wformat=2 -c module_18_driver_development/02_zero_cost_abstraction.cpp -o module_18_driver_development/02_zero_cost_abstraction.o",
+    "file": "module_18_driver_development/02_zero_cost_abstraction.cpp"
+  },
+  {
+    "directory": "/home/nimbus/repos/cpp_mastery_source",
+    "command": "g++ -std=c++20 -Wall -Wextra -Wpedantic -Wshadow -Wconversion -Wsign-conversion -Wnull-dereference -Wformat=2 -c module_18_driver_development/03_peripheral_driver.cpp -o module_18_driver_development/03_peripheral_driver.o",
+    "file": "module_18_driver_development/03_peripheral_driver.cpp"
+  },
+  {
+    "directory": "/home/nimbus/repos/cpp_mastery_source",
+    "command": "g++ -std=c++20 -Wall -Wextra -Wpedantic -Wshadow -Wconversion -Wsign-conversion -Wnull-dereference -Wformat=2 -c module_18_driver_development/04_mini_ecu_project.cpp -o module_18_driver_development/04_mini_ecu_project.o",
+    "file": "module_18_driver_development/04_mini_ecu_project.cpp"
+  }
+]

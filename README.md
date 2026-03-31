@@ -1,13 +1,29 @@
 # C++ Mastery
 
-**Professional C++ Learning Curriculum — From Fundamentals to Embedded Systems**
+**Professional C++ Learning Curriculum — From Fundamentals to Automotive & Embedded Systems**
 
-Kapsamlı bir C++ eğitim müfredatı: 11 modül, 72 kaynak dosya, 20.281 satır kod ve açıklama.
-Her dosya Doxygen formatında İngilizce/Türkçe ikili teori, cppreference.com derinlik bölümleri ve derlenebilir kod örnekleri içerir.
+[![License: Apache 2.0](https://img.shields.io/badge/Code-Apache%202.0-blue.svg)](https://www.apache.org/licenses/LICENSE-2.0)
+[![License: CC BY-NC-SA 4.0](https://img.shields.io/badge/Book-CC%20BY--NC--SA%204.0-lightgrey.svg)](https://creativecommons.org/licenses/by-nc-sa/4.0/)
+[![C++17](https://img.shields.io/badge/C%2B%2B-17-blue.svg)]()
+[![C++20](https://img.shields.io/badge/C%2B%2B-20-green.svg)]()
+[![C++23](https://img.shields.io/badge/C%2B%2B-23-orange.svg)]()
 
-**Primary Reference:** [cppreference.com](https://en.cppreference.com/) — Every file includes relevant cppreference links in its `[CPPREF DEPTH]` section.
+> **Primary Reference:** [cppreference.com](https://en.cppreference.com/) — Every source file includes relevant cppreference links in its `[CPPREF DEPTH]` section.
 
-**📖 Website:** [nimbustan.github.io/cpp_mastery](https://nimbustan.github.io/cpp_mastery/)
+---
+
+## About
+
+C++ Mastery is a comprehensive, open-source C++ learning curriculum designed for professional developers. It covers the entire spectrum from language fundamentals to automotive embedded systems, with real-world examples, in-depth theory blocks, and compilable code.
+
+The project is available in **two editions**:
+
+| Edition | Language | Description | PDF |
+|---------|----------|-------------|-----|
+| **[EN](EN/)** | English | Fully English edition | [Download](https://github.com/nimbustan/cpp_mastery/raw/master/C%2B%2B_Mastery_Book_EN.pdf) |
+| **[EN_TR](EN_TR/)** | English + Turkish | Bilingual edition with Turkish theory explanations | [Download](https://github.com/nimbustan/cpp_mastery/raw/master/C%2B%2B_Mastery_Book_EN_TR.pdf) |
+
+**Website:** [nimbustan.github.io/cpp_mastery](https://nimbustan.github.io/cpp_mastery/)
 
 ---
 
@@ -15,276 +31,128 @@ Her dosya Doxygen formatında İngilizce/Türkçe ikili teori, cppreference.com 
 
 | | |
 |---|---|
-| **Modules** | 11 |
-| **Source Files** | 72 (71 `.cpp` + 1 `.txt`) |
-| **Total Lines** | 20,281 |
-| **Standards** | C++17 / C++20 |
-| **Languages** | English + Turkish (bilingual theory) |
-| **Output** | PDF Book (346 pages) · DOCX · Doxygen HTML |
+| **Modules** | 18 |
+| **Source Files** | 118 per edition (114 `.cpp` + 2 `.txt` + 2 `.md`) |
+| **Total Lines** | ~46,000+ per edition |
+| **Standards** | C++17 / C++20 / C++23 |
+| **Book Pages** | EN: 706 pages · EN_TR: 849 pages |
 
 ---
 
 ## Module Overview
 
-| # | Module | Topic | Std | Files |
-|---|--------|-------|-----|-------|
-| 1 | Basics | Temeller ve Hafıza | C++17 | 9 |
-| 2 | OOP | Nesne Yönelimli Programlama | C++17 | 8 |
-| 3 | Modern C++ | Güvenlik ve Performans | C++17 | 5 |
-| 4 | Templates & STL | Şablonlar ve STL | C++17 | 8 |
-| 5 | Certification Prep | Sertifikasyon Hazırlığı | C++17 | 6 |
-| 6 | Industry Standards | Endüstri Standartları | C++17 | 6 |
-| 7 | Under the Hood | OS Derinlikleri | C++17 | 6 |
-| 8 | Core Guidelines | Üst Düzey Kurallar | C++17 | 6 |
-| 9 | Advanced Mechanics | İleri Mekanikler | C++20 | 7 |
-| 10 | Design Patterns | Tasarım Kalıpları | C++20 | 6 |
-| 11 | Embedded Systems | Gömülü Sistemler | C++20 | 5 |
+| # | Module | Directory | Std | Files |
+|---|--------|-----------|-----|-------|
+| 1 | Basics — Variables & Memory | `module_01_basics` | C++17 | 10 |
+| 2 | OOP — Classes & Polymorphism | `module_02_oop` | C++17 | 8 |
+| 3 | Modern C++ — Safety & Performance | `module_03_modern_cpp` | C++17/C++23 | 6 |
+| 4 | Templates & STL — Generic Programming | `module_04_advanced` | C++17 | 9 |
+| 5 | Certification Prep — Exam Topics | `module_05_certification` | C++17 | 7 |
+| 6 | Industry Standards — Professional Tools | `module_06_industry_standards` | C++17 | 11 |
+| 7 | Under the Hood — Compiler & OS Internals | `module_07_under_the_hood` | C++17/C++20 | 11 |
+| 8 | Core Guidelines — Best Practices | `module_08_core_guidelines` | C++17 | 9 |
+| 9 | Advanced Mechanics — Low-Level Techniques | `module_09_advanced_mechanics` | C++20 | 8 |
+| 10 | Software Architecture & Design Patterns | `module_10_design_patterns` | C++20 | 7 |
+| 11 | Embedded Systems — Bare Metal & RTOS | `module_11_embedded_systems` | C++20 | 5 |
+| 12 | Coroutines — Async Programming | `module_12_coroutines` | C++20 | 2 |
+| 13 | Networking — Sockets & I/O | `module_13_networking` | C++20 | 2 |
+| 14 | Automotive Networks — CAN, LIN, FlexRay | `module_14_automotive_networks` | C++20 | 6 |
+| 15 | Hardware Interfaces — GPIO, ADC, DMA | `module_15_hw_interfaces` | C++20 | 5 |
+| 16 | AUTOSAR — Classic & Adaptive Platform | `module_16_autosar` | C++20 | 5 |
+| 17 | SDV — Software-Defined Vehicles | `module_17_sdv` | C++20 | 3 |
+| 18 | Driver Development — HAL & BSP | `module_18_driver_development` | C++20 | 4 |
 
 ---
 
-## Module 1: Basics — Temeller ve Hafıza
-📁 `module_01_basics` · C++17 · 9 files · 1,659 lines
-
-| File | Topic |
-|------|-------|
-| `01_variables_and_memory.cpp` | Variables, Data Types, and Memory Model |
-| `02_pointers_and_references.cpp` | Pointers, References, and Memory Addresses |
-| `03_control_flow_and_functions.cpp` | Control Flow and Function Overloading |
-| `04_operators_and_expressions.cpp` | Operators, Expressions & Precedence |
-| `05_control_flow_deepdive.cpp` | Control Flow Deep Dive |
-| `06_strings_and_arrays.cpp` | Strings and Arrays |
-| `07_enums_type_conversions.cpp` | Enumerations, auto, typedef/using & Type Conversions |
-| `08_file_io_and_streams.cpp` | File I/O and Stream Operations |
-| `09_scope_namespace_recursion.cpp` | Scope, Lifetime, Namespace & Recursion |
-
-## Module 2: OOP — Nesne Yönelimli Programlama
-📁 `module_02_oop` · C++17 · 8 files · 2,344 lines
-
-| File | Topic |
-|------|-------|
-| `01_classes_objects.cpp` | Classes, Objects, and Access Specifiers |
-| `02_inheritance_polymorphism.cpp` | Inheritance and Polymorphism |
-| `03_rule_of_three_five.cpp` | Memory Leaks and Rule of 3/5/0 |
-| `04_multiple_inheritance.cpp` | Multiple Inheritance & Diamond Problem |
-| `05_encapsulation_abstraction.cpp` | Encapsulation & Abstraction |
-| `06_static_and_friends.cpp` | Static Members & Friend Functions |
-| `07_nested_and_local_classes.cpp` | Nested & Local Classes |
-| `08_rtti_typeid.cpp` | RTTI & typeid |
-
-## Module 3: Modern C++ — Güvenlik ve Performans
-📁 `module_03_modern_cpp` · C++17 · 5 files · 1,652 lines
-
-| File | Topic |
-|------|-------|
-| `01_smart_pointers.cpp` | Smart Pointers and RAII |
-| `02_lambdas.cpp` | Lambda Expressions — From Zero to Mastery |
-| `03_move_semantics_rvalue.cpp` | Move Semantics & R-Values |
-| `04_modern_types.cpp` | Modern Data Types: optional, variant, any, string_view |
-| `05_structured_bindings_optional.cpp` | Structured Bindings & C++17 Vocabulary Types |
-
-## Module 4: Templates & STL — Şablonlar ve STL
-📁 `module_04_advanced` · C++17 · 8 files · 3,105 lines
-
-| File | Topic |
-|------|-------|
-| `01_templates_stl.cpp` | Templates and STL |
-| `02_functors_callbacks.cpp` | Functors and Callbacks |
-| `03_stl_containers_deepdive.cpp` | Container Architectures & Big-O |
-| `04_iterators_and_adaptors.cpp` | Iterators, Categories and Adaptors |
-| `05_algorithms_masterclass.cpp` | Algorithm Masterclass |
-| `06_associative_containers.cpp` | Associative & Unordered Containers |
-| `07_string_operations.cpp` | String Operations & string_view |
-| `08_ranges_and_views.cpp` | C++20 Ranges & Views |
-
-## Module 5: Certification Prep — Sertifikasyon Hazırlığı
-📁 `module_05_certification` · C++17 · 6 files · 1,319 lines
-
-| File | Topic |
-|------|-------|
-| `01_undefined_behavior.cpp` | Undefined Behavior & Tricky Questions |
-| `02_object_slicing_virtual.cpp` | Object Slicing and Virtual Tables |
-| `03_type_casting.cpp` | Type Casting (static/dynamic/const/reinterpret) |
-| `04_exceptions_handling.cpp` | Exception Handling |
-| `05_const_correctness.cpp` | const Correctness |
-| `06_interview_gotchas.cpp` | Interview Gotchas & Tricky Behavior |
-
-## Module 6: Industry Standards — Endüstri Standartları
-📁 `module_06_industry_standards` · C++17 · 6 files · 1,775 lines
-
-| File | Topic |
-|------|-------|
-| `01_concurrency_threads.cpp` | Threading and Concurrency |
-| `02_cmake_basics.txt` | CMake Build System |
-| `03_unit_testing_gtest.cpp` | Unit Testing (TDD) with Google Test |
-| `04_valgrind_profiling.cpp` | Memory Profiling and Valgrind |
-| `05_async_futures.cpp` | std::async, std::future, std::promise |
-| `06_debugging_techniques.cpp` | Debugging Techniques & Defensive Programming |
-
-## Module 7: Under the Hood — OS Derinlikleri
-📁 `module_07_under_the_hood` · C++17 · 6 files · 1,497 lines
-
-| File | Topic |
-|------|-------|
-| `01_vtable_memory_layout.cpp` | V-Table Memory Cost Proof |
-| `02_sigsegv_and_raii.cpp` | SIGSEGV & Prevention via RAII |
-| `03_fork_vs_thread_pool.cpp` | POSIX fork() vs std::thread & Thread Pooling |
-| `04_memory_model_and_cache.cpp` | CPU Cache Hierarchy, False Sharing, Cache-Friendly Design |
-| `05_compilation_pipeline.cpp` | C++ Compilation Pipeline — Source to Executable |
-| `06_abi_and_name_mangling.cpp` | ABI and C++ Name Mangling |
-
-## Module 8: C++ Core Guidelines — Üst Düzey Kurallar
-📁 `module_08_core_guidelines` · C++17 · 6 files · 1,393 lines
-
-| File | Topic |
-|------|-------|
-| `01_philosophy_and_interfaces.cpp` | Philosophy & Interfaces (P.1/P.4/P.5) |
-| `02_resource_management_rule_of_zero.cpp` | Resource Management & Rule of Zero |
-| `03_error_handling.cpp` | Error Handling (E.2/E.3/E.15/E.16) |
-| `04_concurrency_and_performance.cpp` | Concurrency & Performance Rules (CP.20) |
-| `05_smart_pointer_guidelines.cpp` | Smart Pointer Ownership Rules |
-| `06_class_design_guidelines.cpp` | Class Design Rules |
-
-## Module 9: Advanced Mechanics — İleri Mekanikler
-📁 `module_09_advanced_mechanics` · **C++20** · 7 files · 1,570 lines
-
-| File | Topic |
-|------|-------|
-| `01_bit_manipulation_and_alignment.cpp` | Bit Manipulation & Memory Alignment |
-| `02_operator_overloading.cpp` | Operator Overloading |
-| `03_advanced_pointers.cpp` | Pointers to Member Functions & std::invoke |
-| `04_constant_evaluation.cpp` | constexpr vs consteval vs constinit |
-| `05_type_traits_and_concepts.cpp` | Type Traits (SFINAE) & C++20 Concepts |
-| `06_sfinae_and_tag_dispatch.cpp` | SFINAE, Tag Dispatch & if constexpr |
-| `07_crtp_pattern.cpp` | CRTP — Static Polymorphism |
-
-## Module 10: Design Patterns — Tasarım Kalıpları
-📁 `module_10_design_patterns` · **C++20** · 6 files · 2,415 lines
-
-| File | Topic |
-|------|-------|
-| `01_solid_principles.cpp` | SOLID Principles |
-| `02_creational_patterns.cpp` | Creational — Singleton, Factory, Builder, Prototype |
-| `03_behavioral_patterns.cpp` | Behavioral — Observer, Strategy, Command, State |
-| `04_structural_patterns.cpp` | Structural — Adapter, Decorator, Facade, Composite, Proxy |
-| `05_testable_design.cpp` | Testable Design — CRTP, Type Erasure, Policy-Based |
-| `06_pattern_decision_guide.cpp` | Pattern Decision Guide — Anti-Patterns, Comparisons, Proxy, Prototype |
-
-## Module 11: Embedded & Real-Time — Gömülü Sistemler
-📁 `module_11_embedded_systems` · **C++20** · 5 files · 1,552 lines
-
-| File | Topic |
-|------|-------|
-| `01_volatile_hardware.cpp` | volatile Keyword, Memory-Mapped I/O, ISR |
-| `02_bitfields_protocols.cpp` | Bitfields, Protocol Parsing, Packed Structs |
-| `03_embedded_constraints.cpp` | No-Heap Allocation, Static Buffers, constexpr |
-| `04_rtos_concurrency.cpp` | RTOS Patterns, Priority Inversion, Lock-Free |
-| `05_advanced_parallelism.cpp` | Thread Pools, C++17 Parallel Algorithms, Work Stealing |
-
----
-
-## File Format
-
-Every `.cpp` file follows a consistent Doxygen-documented structure:
+## Repository Structure
 
 ```
-/**
- * @file    filename.cpp
- * @brief   EN: English summary / TR: Türkçe özet
- * @details
- * ==============================================
- * [THEORY: Topic / TEORİ: Konu]
- * ==============================================
- * EN: English theory paragraph...
- * TR: Türkçe teori paragrafı...
- *
- * ==============================================
- * [CPPREF DEPTH: cppreference.com Deep Dive]
- * ==============================================
- * EN: Detailed cppreference coverage with links...
- * TR: Detaylı cppreference açıklaması...
- */
-
-// Compilable, executable C++ code with inline comments
-int main() { ... }
+cpp_mastery/
+├── EN/                              # English-only edition
+│   ├── module_01_basics/            # 18 module directories
+│   ├── ...
+│   ├── module_18_driver_development/
+│   ├── main.cpp                     # Entry point
+│   ├── compile_commands.json        # Build configuration
+│   ├── cpp_learning_plan.md         # Learning roadmap
+│   ├── curriculum_details.md        # Detailed curriculum
+│   ├── README.md                    # EN edition details
+│   └── LICENSE
+│
+├── EN_TR/                           # Bilingual EN+TR edition
+│   ├── module_01_basics/
+│   ├── ...
+│   ├── module_18_driver_development/
+│   ├── main.cpp
+│   ├── compile_commands.json
+│   ├── cpp_learning_plan.md
+│   ├── curriculum_details.md
+│   ├── Doxyfile                     # Doxygen configuration
+│   ├── README.md                    # EN_TR edition details
+│   └── LICENSE
+│
+├── docs/                            # GitHub Pages website
+│   ├── index.html                   # Language selector
+│   ├── en/                          # English site
+│   └── tr/                          # Turkish site
+│
+├── C++_Mastery_Book_EN.pdf          # English PDF (706 pages)
+├── C++_Mastery_Book_EN_TR.pdf       # Bilingual PDF (849 pages)
+├── LICENSE
+└── README.md                        # ← You are here
 ```
 
 ---
 
-## Compilation
+## Quick Start
 
 ```bash
-# Modules 1-8 (C++17):
-g++ -std=c++17 -Wall -Wextra -Wpedantic -Wshadow \
-    -Wconversion -Wsign-conversion -Wnull-dereference -Wformat=2 \
-    <file>.cpp -o output
+# Clone the repository
+git clone https://github.com/nimbustan/cpp_mastery.git
+cd cpp_mastery
 
-# Modules 9-11 (C++20):
-g++ -std=c++20 -Wall -Wextra -Wpedantic -Wshadow \
-    -Wconversion -Wsign-conversion -Wnull-dereference -Wformat=2 \
-    <file>.cpp -o output
+# Choose your edition
+cd EN        # English only
+# or
+cd EN_TR     # Bilingual EN+TR
 
-# Concurrency files (add -pthread):
-# module_05/05, module_06/01, module_06/05, module_07/03,
-# module_07/04, module_08/04, module_11/04, module_11/05
-g++ -std=c++17 ... -pthread <file>.cpp -o output
+# Compile any file
+g++ -std=c++20 -Wall -Wextra module_01_basics/01_variables_and_memory.cpp -o demo
+./demo
 
-# fork() example (POSIX only - Linux/macOS):
-g++ -std=c++17 -pthread module_07_under_the_hood/03_fork_vs_thread_pool.cpp -o fork_demo
+# Compile with main.cpp entry point
+g++ -std=c++20 -Wall -Wextra main.cpp -o main
+./main
 ```
 
-All 72 files compile with **0 warnings, 0 errors** using the strict flags above.
-
 ---
 
-## Book Output
+## Source File Structure
 
-The curriculum is also available as a professionally formatted book:
+Every `.cpp` file follows a consistent pattern:
 
-- **PDF** — `C++_Mastery_Book.pdf` (335 pages, clickable TOC, artistic cover)
-- **DOCX** — `C++_Mastery_Book.docx`
-
-Generated via custom Python scripts using ReportLab (PDF) and python-docx (DOCX).
-
----
-
-## References
-
-- [cppreference.com](https://en.cppreference.com/)
-- [C++ Core Guidelines](https://isocpp.github.io/CppCoreGuidelines/CppCoreGuidelines)
-- [ISO C++](https://isocpp.org/)
-- [Google Test](https://google.github.io/googletest/)
-- [CMake Documentation](https://cmake.org/documentation/)
+```
+📄 Doxygen header (@file, @brief, @details)
+📖 [THEORY] blocks — Detailed English explanations (+ Turkish in EN_TR)
+🔗 [CPPREF DEPTH] — cppreference.com links for further reading
+💻 Compilable code examples with output
+✅ main() — Every file is independently compilable and runnable
+```
 
 ---
 
 ## License
 
-This project uses a **dual-license** model:
-
 | Component | License |
-|---|---|
-| **Source code** (`.cpp` files) | [Apache License 2.0](https://www.apache.org/licenses/LICENSE-2.0) |
-| **Book content** (text, explanations, PDF layout) | [CC BY-NC-SA 4.0](https://creativecommons.org/licenses/by-nc-sa/4.0/) |
-
-### Apache License 2.0 — Source Code
-
-You may freely use, modify, and distribute the source code examples, including for commercial purposes. Requirements:
-- **Attribution** — Retain the original copyright notice and license
-- **State Changes** — Clearly mark any modifications you make
-- **Include License** — Distribute a copy of the Apache 2.0 license with your work
-- **Patent Grant** — Contributors grant a patent license for their contributions
-
-### CC BY-NC-SA 4.0 — Book Content
-
-The educational text, theory sections, bilingual comments, and PDF book layout are licensed under Creative Commons Attribution-NonCommercial-ShareAlike 4.0:
-- **Attribution** — Give appropriate credit and link to the license
-- **NonCommercial** — No commercial use of the content
-- **ShareAlike** — Distribute derivatives under the same license
-
-See [LICENSE](LICENSE) for full details.
+|-----------|---------|
+| **Source Code** (`.cpp`, `.h`, build files) | [Apache License 2.0](https://www.apache.org/licenses/LICENSE-2.0) |
+| **Book Content** (PDF, theory blocks, documentation) | [CC BY-NC-SA 4.0](https://creativecommons.org/licenses/by-nc-sa/4.0/) |
 
 ---
 
-**Author:** Murat Mecit KAHRAMANLI · March 2026
+## Author
 
-**Copyright** © 2026 Murat Mecit KAHRAMANLI. All rights reserved.
+**Murat Mecit KAHRAMANLI**
+
+- GitHub: [@nimbustan](https://github.com/nimbustan)
+- Project: [nimbustan.github.io/cpp_mastery](https://nimbustan.github.io/cpp_mastery/)

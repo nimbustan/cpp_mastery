@@ -1,0 +1,33 @@
+# CMakeLists.txt (Example)
+# ---------------------------------------------------------------------
+# [THEORY: Why Do We Use CMake?]
+# EN:
+# Compiling C++ code manually like `g++ a.cpp b.cpp -o main` works for small tasks.
+# But what if you have hundreds of files, or external libraries written by someone 
+# else like "nlohmann_json" or "Google_Test"? It becomes impossible!
+# CMake is a PERFECT "meta-build" tool. It allows your project to be compiled with 
+# the EXACT SAME STANDARD on Windows (Visual Studio), Linux (Make/Ninja), or Mac (Xcode).
+#
+# ---------------------------------------------------------------------
+
+# 1. Minimum CMake Version Required
+# EN: Tells the system the lowest acceptable CMake version.
+cmake_minimum_required(VERSION 3.10)
+
+# 2. Project Declaration
+# EN: Setting the Project Name, Version, and the Language (CXX = C++).
+project(ModernCppMastery VERSION 1.0.0 LANGUAGES CXX)
+
+# 3. Setting C++ Standards (Crucial!)
+# EN: Forcing the compiler to use C++17 rules strictly.
+set(CMAKE_CXX_STANDARD 17)
+set(CMAKE_CXX_STANDARD_REQUIRED True)
+
+# 4. Source Files & Executable Target
+# EN: "Create an application named MainApp utilizing these source files."
+# add_executable(MainApp src/main.cpp src/player.cpp)
+
+# 5. External Libraries (Dependencies)
+# EN: If we downloaded a package via vcpkg or conan, we bind it here.
+# find_package(GTest REQUIRED)
+# target_link_libraries(MainApp PRIVATE GTest::gtest_main)

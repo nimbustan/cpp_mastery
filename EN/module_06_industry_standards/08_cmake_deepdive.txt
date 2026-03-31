@@ -1,0 +1,474 @@
+# CMake Deep Dive — Derinlemesine CMake Rehberi
+# ═══════════════════════════════════════════════════════════════════════════
+#
+# EN: This file is a comprehensive reference for modern CMake (3.20+).
+#     It covers target-based commands, FetchContent, presets, cross-compilation,
+#     CPack, CTest, generator expressions, and best practices.
+#
+#
+# Date: 2026
+# © 2026 Murat Mecit KAHRAMANLI. All rights reserved.
+# License: Code: Apache License 2.0 | Book content: CC BY-NC-SA 4.0
+# ═══════════════════════════════════════════════════════════════════════════
+
+# ═══════════════════════════════════════════════════════════════════════════
+# PART 1: MODERN TARGET-BASED CMAKE
+# ═══════════════════════════════════════════════════════════════════════════
+#
+# [THEORY: Target-Based vs Old-Style CMake]
+#
+# EN: OLD-STYLE CMake (before 3.0) used global variables:
+#     include_directories(/usr/include/mylib)    ← Affects ALL targets
+#     link_libraries(mylib)                      ← Affects ALL targets
+#     add_definitions(-DUSE_FEATURE)             ← Affects ALL targets
+#
+#     MODERN CMake (3.0+) is TARGET-BASED:
+#     target_include_directories(myapp PRIVATE ...)  ← Only affects myapp
+#     target_link_libraries(myapp PRIVATE mylib)     ← Only affects myapp
+#     target_compile_definitions(myapp PRIVATE ...)  ← Only affects myapp
+#
+#     The key insight: Everything is a TARGET. Libraries are targets.
+#     Executables are targets. When you link target A to target B,
+#     B's PUBLIC properties propagate to A automatically.
+#
+#
+# EN: ┌──────────┬───────────────────────────────────────────────────────┐
+#     │ Keyword  │ Who sees it?                                          │
+#     ├──────────┼───────────────────────────────────────────────────────┤
+#     │ PRIVATE  │ Only the target itself                                │
+#     │ PUBLIC   │ The target AND anyone who links to it                 │
+#     │ INTERFACE│ Only those who link to it (not the target itself)     │
+#     └──────────┴───────────────────────────────────────────────────────┘
+#
+#     Example: If library "math_lib" has:
+#       target_include_directories(math_lib PUBLIC include/)
+#     Then any target linking to math_lib automatically gets include/ too.
+#
+
+# Example: Complete Modern CMake Project
+# ─────────────────────────────────────────────────────────────────────────
+
+cmake_minimum_required(VERSION 3.20)
+project(ecu_firmware
+    VERSION 2.1.0
+    DESCRIPTION "Automotive ECU Firmware"
+    LANGUAGES CXX
+)
+
+# EN: Set C++ standard at project level (targets can override)
+set(CMAKE_CXX_STANDARD 20)
+set(CMAKE_CXX_STANDARD_REQUIRED ON)
+set(CMAKE_CXX_EXTENSIONS OFF)   # EN: No GNU extensions (strict ISO)
+
+# EN: Export compile_commands.json for clangd/clang-tidy
+set(CMAKE_EXPORT_COMPILE_COMMANDS ON)
+
+# ── Library target ──
+
+# EN: Create a STATIC library from source files
+add_library(can_stack STATIC
+    src/can_driver.cpp
+    src/can_parser.cpp
+    src/can_transport.cpp
+)
+
+# EN: target_include_directories: Tell the compiler where to find headers
+#     PUBLIC = both this library and its consumers need these headers
+target_include_directories(can_stack
+    PUBLIC
+        $<BUILD_INTERFACE:${CMAKE_CURRENT_SOURCE_DIR}/include>
+        $<INSTALL_INTERFACE:include>
+    PRIVATE
+        ${CMAKE_CURRENT_SOURCE_DIR}/src  # EN: Internal headers
+)
+
+# EN: target_compile_features: Require specific C++ features
+#     This is BETTER than set(CMAKE_CXX_STANDARD) for libraries
+target_compile_features(can_stack PUBLIC cxx_std_20)
+
+# EN: target_compile_options: Add warning flags
+target_compile_options(can_stack PRIVATE
+    -Wall -Wextra -Wpedantic -Wshadow -Wconversion
+    $<$<CONFIG:Debug>:-g -O0 -fsanitize=address>
+    $<$<CONFIG:Release>:-O3 -DNDEBUG>
+)
+
+# EN: target_compile_definitions: Preprocessor defines
+target_compile_definitions(can_stack
+    PUBLIC
+        ECU_PROJECT_VERSION="${PROJECT_VERSION}"
+    PRIVATE
+        CAN_INTERNAL_DEBUG     # EN: Only visible inside can_stack
+)
+
+# ── Executable target ──
+
+add_executable(ecu_app src/main.cpp)
+
+# EN: Linking to can_stack propagates its PUBLIC include dirs,
+#     compile features, and definitions automatically
+target_link_libraries(ecu_app PRIVATE can_stack)
+
+# ═══════════════════════════════════════════════════════════════════════════
+# PART 2: FETCHCONTENT — Dependency Management
+# ═══════════════════════════════════════════════════════════════════════════
+#
+# [THEORY: FetchContent vs Submodules vs Package Managers]
+#
+# EN: FetchContent (CMake 3.11+) downloads dependencies at configure time.
+#     No need for git submodules, apt install, or manual downloads.
+#
+#     ┌──────────────────┬───────────────────────────────────────────────────┐
+#     │ Method           │ Trade-offs                                        │
+#     ├──────────────────┼───────────────────────────────────────────────────┤
+#     │ FetchContent     │ ✅ Auto-download, version pinning                 │
+#     │                  │ ❌ Re-downloads on clean build, slow first config │
+#     │ Git Submodules   │ ✅ Version pinning, local copy                    │
+#     │                  │ ❌ Confusing workflow, easy to get wrong          │
+#     │ vcpkg            │ ✅ Pre-built binaries, large registry             │
+#     │                  │ ❌ Extra tool, Microsoft-centric                  │
+#     │ Conan            │ ✅ Flexible, multi-platform, binary caching       │
+#     │                  │ ❌ Python dependency, learning curve              │
+#     │ System packages  │ ✅ Zero setup (apt install)                       │
+#     │                  │ ❌ Version pinning impossible, not reproducible   │
+#     └──────────────────┴───────────────────────────────────────────────────┘
+#
+
+include(FetchContent)
+
+# EN: Download GoogleTest at configure time
+FetchContent_Declare(
+    googletest
+    GIT_REPOSITORY https://github.com/google/googletest.git
+    GIT_TAG        v1.14.0       # EN: Always pin to specific version!
+    GIT_SHALLOW    TRUE          # EN: Don't download full history
+)
+
+# EN: Download nlohmann/json header-only library
+FetchContent_Declare(
+    nlohmann_json
+    GIT_REPOSITORY https://github.com/nlohmann/json.git
+    GIT_TAG        v3.11.3
+    GIT_SHALLOW    TRUE
+)
+
+# EN: Download fmt (formatting library, predecessor of std::format)
+FetchContent_Declare(
+    fmt
+    GIT_REPOSITORY https://github.com/fmtlib/fmt.git
+    GIT_TAG        10.2.1
+    GIT_SHALLOW    TRUE
+)
+
+# EN: MakeAvailable downloads + adds to build (calls add_subdirectory internally)
+FetchContent_MakeAvailable(googletest nlohmann_json fmt)
+
+# EN: Now you can link to them like any other target:
+#   target_link_libraries(ecu_app PRIVATE nlohmann_json::nlohmann_json)
+#   target_link_libraries(ecu_app PRIVATE fmt::fmt)
+#   target_link_libraries(test_app PRIVATE GTest::gtest_main)
+
+# ═══════════════════════════════════════════════════════════════════════════
+# PART 3: CMAKE PRESETS (CMakePresets.json)
+# ═══════════════════════════════════════════════════════════════════════════
+#
+# [THEORY: What Are CMake Presets?]
+#
+# EN: CMake Presets (3.19+) replace long command-line arguments with a JSON file.
+#     Instead of: cmake -B build -DCMAKE_BUILD_TYPE=Debug -DCMAKE_CXX_COMPILER=g++-12 ...
+#     You write:  cmake --preset debug
+#
+#     Presets file goes in project root: CMakePresets.json (committed to VCS)
+#     User overrides go in: CMakeUserPresets.json (in .gitignore!)
+#
+#
+# Example CMakePresets.json:
+# ─────────────────────────────────────────────────────────────────────────
+# {
+#     "version": 6,
+#     "cmakeMinimumRequired": { "major": 3, "minor": 25, "patch": 0 },
+#
+#     "configurePresets": [
+#         {
+#             "name": "base",
+#             "hidden": true,
+#             "generator": "Ninja",
+#             "binaryDir": "${sourceDir}/build/${presetName}",
+#             "cacheVariables": {
+#                 "CMAKE_CXX_STANDARD": "20",
+#                 "CMAKE_EXPORT_COMPILE_COMMANDS": "ON"
+#             }
+#         },
+#         {
+#             "name": "debug",
+#             "displayName": "Debug (GCC, ASan)",
+#             "inherits": "base",
+#             "cacheVariables": {
+#                 "CMAKE_BUILD_TYPE": "Debug",
+#                 "CMAKE_CXX_FLAGS": "-fsanitize=address -fno-omit-frame-pointer"
+#             }
+#         },
+#         {
+#             "name": "release",
+#             "displayName": "Release (GCC, LTO)",
+#             "inherits": "base",
+#             "cacheVariables": {
+#                 "CMAKE_BUILD_TYPE": "Release",
+#                 "CMAKE_INTERPROCEDURAL_OPTIMIZATION": "ON"
+#             }
+#         },
+#         {
+#             "name": "cross-arm",
+#             "displayName": "Cross-compile for ARM Cortex-M4",
+#             "inherits": "base",
+#             "toolchainFile": "${sourceDir}/cmake/toolchain-arm-none-eabi.cmake",
+#             "cacheVariables": {
+#                 "CMAKE_BUILD_TYPE": "Release"
+#             }
+#         }
+#     ],
+#
+#     "buildPresets": [
+#         { "name": "debug",   "configurePreset": "debug" },
+#         { "name": "release", "configurePreset": "release" }
+#     ],
+#
+#     "testPresets": [
+#         {
+#             "name": "debug-tests",
+#             "configurePreset": "debug",
+#             "output": { "outputOnFailure": true },
+#             "execution": { "jobs": 4 }
+#         }
+#     ]
+# }
+#
+# Usage
+#   cmake --preset debug          # Configure
+#   cmake --build --preset debug  # Build
+#   ctest --preset debug-tests    # Test
+
+# ═══════════════════════════════════════════════════════════════════════════
+# PART 4: CROSS-COMPILATION TOOLCHAIN FILES
+# ═══════════════════════════════════════════════════════════════════════════
+#
+# [THEORY: Cross-Compilation]
+#
+# EN: Cross-compilation = building code on one platform (host) to run on
+#     another (target). Common in automotive: develop on x86 Linux,
+#     deploy to ARM Cortex-M4 ECU.
+#
+#     A toolchain file tells CMake:
+#     - Which compiler to use (arm-none-eabi-gcc)
+#     - What the target system is (Generic = bare metal)
+#     - Where to find libraries for the target
+#
+#
+# Example: cmake/toolchain-arm-none-eabi.cmake
+# ─────────────────────────────────────────────────────────────────────────
+# set(CMAKE_SYSTEM_NAME Generic)        # EN: Bare-metal (no OS)
+# set(CMAKE_SYSTEM_PROCESSOR arm)
+#
+# set(CMAKE_C_COMPILER   arm-none-eabi-gcc)
+# set(CMAKE_CXX_COMPILER arm-none-eabi-g++)
+# set(CMAKE_ASM_COMPILER arm-none-eabi-gcc)
+#
+# # EN: Cortex-M4 with hardware FPU
+# set(CMAKE_C_FLAGS   "-mcpu=cortex-m4 -mthumb -mfloat-abi=hard -mfpu=fpv4-sp-d16")
+# set(CMAKE_CXX_FLAGS "${CMAKE_C_FLAGS} -fno-exceptions -fno-rtti")
+#
+# # EN: Don't try to link during compiler detection (bare metal has no stdlib)
+# set(CMAKE_TRY_COMPILE_TARGET_TYPE STATIC_LIBRARY)
+#
+# # EN: Sysroot for target libraries
+# set(CMAKE_FIND_ROOT_PATH /opt/arm-toolchain/sysroot)
+# set(CMAKE_FIND_ROOT_PATH_MODE_PROGRAM NEVER)
+# set(CMAKE_FIND_ROOT_PATH_MODE_LIBRARY ONLY)
+# set(CMAKE_FIND_ROOT_PATH_MODE_INCLUDE ONLY)
+#
+# Usage
+#   cmake -B build-arm -DCMAKE_TOOLCHAIN_FILE=cmake/toolchain-arm-none-eabi.cmake
+#   cmake --build build-arm
+
+# ═══════════════════════════════════════════════════════════════════════════
+# PART 5: CPACK — Packaging
+# ═══════════════════════════════════════════════════════════════════════════
+#
+# [THEORY: CPack]
+#
+# EN: CPack creates distributable packages (DEB, RPM, ZIP, NSIS installer)
+#     from your CMake project. No separate packaging scripts needed.
+#
+
+# EN: Install rules tell CMake what goes into the package
+install(TARGETS ecu_app
+    RUNTIME DESTINATION bin
+)
+install(TARGETS can_stack
+    ARCHIVE DESTINATION lib
+    LIBRARY DESTINATION lib
+)
+install(DIRECTORY include/
+    DESTINATION include
+    FILES_MATCHING PATTERN "*.hpp"
+)
+
+# EN: CPack configuration
+set(CPACK_PACKAGE_NAME "ecu-firmware")
+set(CPACK_PACKAGE_VERSION ${PROJECT_VERSION})
+set(CPACK_PACKAGE_DESCRIPTION_SUMMARY "ECU Firmware Package")
+set(CPACK_PACKAGE_CONTACT "developer@example.com")
+
+# EN: Generate DEB package (Debian/Ubuntu)
+set(CPACK_GENERATOR "DEB;TGZ;ZIP")
+set(CPACK_DEBIAN_PACKAGE_DEPENDS "libc6 (>= 2.35)")
+
+include(CPack)
+
+# Usage
+#   cmake --build build --target package
+#   → ecu-firmware-2.1.0-Linux.deb
+#   → ecu-firmware-2.1.0-Linux.tar.gz
+#   → ecu-firmware-2.1.0-Linux.zip
+
+# ═══════════════════════════════════════════════════════════════════════════
+# PART 6: CTEST — Testing Integration
+# ═══════════════════════════════════════════════════════════════════════════
+#
+# [THEORY: CTest]
+#
+# EN: CTest is CMake's built-in test runner. It works with ANY test framework
+#     (GoogleTest, Catch2, doctest, or plain executables).
+#
+
+enable_testing()
+
+# EN: Method 1: Manual test registration
+add_executable(test_can_parser tests/test_can_parser.cpp)
+target_link_libraries(test_can_parser PRIVATE can_stack GTest::gtest_main)
+add_test(NAME CanParserTests COMMAND test_can_parser)
+
+# EN: Method 2: GoogleTest auto-discovery (recommended)
+#     Scans the test executable for TEST() macros and registers each one
+include(GoogleTest)
+gtest_discover_tests(test_can_parser
+    PROPERTIES
+        TIMEOUT 30           # EN: 30 second timeout per test
+        LABELS "unit"        # EN: Label for filtering
+)
+
+# EN: Method 3: Custom test with arguments
+add_test(
+    NAME IntegrationTest_CAN
+    COMMAND ecu_app --test-mode --bus=vcan0
+    WORKING_DIRECTORY ${CMAKE_BINARY_DIR}
+)
+set_tests_properties(IntegrationTest_CAN PROPERTIES
+    TIMEOUT 60
+    LABELS "integration"
+    ENVIRONMENT "CAN_BITRATE=500000"
+)
+
+# Usage
+#   cd build && ctest                        # Run all tests
+#   ctest --output-on-failure               # Show output only if tests fail
+#   ctest -L unit                            # Run only tests labeled "unit"
+#   ctest -L integration                     # Run only integration tests
+#   ctest -j $(nproc)                        # Run tests in parallel
+#   ctest --rerun-failed                     # Rerun only failed tests
+
+# ═══════════════════════════════════════════════════════════════════════════
+# PART 7: GENERATOR EXPRESSIONS
+# ═══════════════════════════════════════════════════════════════════════════
+#
+# [THEORY: Generator Expressions]
+#
+# EN: Generator expressions ($<...>) are evaluated at BUILD TIME (not configure time).
+#     They allow conditional behavior based on build configuration, platform, etc.
+#
+#     Key generator expressions:
+#     ┌───────────────────────────────────────────┬──────────────────────────────────────┐
+#     │ Expression                                │ Meaning                              │
+#     ├───────────────────────────────────────────┼──────────────────────────────────────┤
+#     │ $<CONFIG:Debug>                           │ True if Debug build                  │
+#     │ $<CONFIG:Release>                         │ True if Release build                │
+#     │ $<PLATFORM_ID:Linux>                      │ True if building on Linux            │
+#     │ $<CXX_COMPILER_ID:GNU>                    │ True if using GCC                    │
+#     │ $<BOOL:${MY_VAR}>                         │ True if MY_VAR is truthy             │
+#     │ $<BUILD_INTERFACE:...>                    │ Only during build (not install)      │
+#     │ $<INSTALL_INTERFACE:...>                  │ Only after install                   │
+#     │ $<TARGET_FILE:target>                     │ Full path to target's output file    │
+#     │ $<IF:cond,true_val,false_val>             │ Conditional value (CMake 3.8+)       │
+#     └───────────────────────────────────────────┴──────────────────────────────────────┘
+#
+
+# EN: Example: Different flags for Debug vs Release
+target_compile_options(can_stack PRIVATE
+    $<$<CONFIG:Debug>:-g -O0 -DDEBUG_MODE>
+    $<$<CONFIG:Release>:-O3 -DNDEBUG -march=native>
+)
+
+# EN: Example: Compiler-specific flags
+target_compile_options(can_stack PRIVATE
+    $<$<CXX_COMPILER_ID:GNU>:-Wlogical-op -Wduplicated-cond>
+    $<$<CXX_COMPILER_ID:Clang>:-Wno-unused-lambda-capture>
+    $<$<CXX_COMPILER_ID:MSVC>:/W4 /permissive->
+)
+
+# EN: Example: Platform-specific source files
+target_sources(can_stack PRIVATE
+    $<$<PLATFORM_ID:Linux>:src/can_socketcan.cpp>
+    $<$<PLATFORM_ID:Windows>:src/can_peak.cpp>
+)
+
+# ═══════════════════════════════════════════════════════════════════════════
+# PART 8: BEST PRACTICES SUMMARY
+# ═══════════════════════════════════════════════════════════════════════════
+#
+# EN: Modern CMake Best Practices:
+#
+#     DO:
+#     ✅ Use target_* commands (not global include_directories, etc.)
+#     ✅ Specify PRIVATE/PUBLIC/INTERFACE correctly
+#     ✅ Use FetchContent or package managers for dependencies
+#     ✅ Use CMakePresets.json for reproducible builds
+#     ✅ Use generator expressions for config-dependent behavior
+#     ✅ Pin dependency versions (GIT_TAG v1.14.0, not GIT_TAG main)
+#     ✅ Use CMAKE_EXPORT_COMPILE_COMMANDS for IDE/tooling support
+#     ✅ Use target_compile_features (cxx_std_20) for portability
+#
+#     DON'T:
+#     ❌ Use include_directories() — use target_include_directories()
+#     ❌ Use link_libraries() — use target_link_libraries()
+#     ❌ Use add_definitions() — use target_compile_definitions()
+#     ❌ Set CMAKE_CXX_FLAGS directly — use target_compile_options()
+#     ❌ Use file(GLOB ...) for source files (fragile, misses new files)
+#     ❌ Use GIT_TAG main/master (non-reproducible builds!)
+#     ❌ Hardcode paths (/usr/lib/...) — use find_package() or FetchContent
+#
+#
+#
+# ═══════════════════════════════════════════════════════════════════════════
+# QUICK REFERENCE: Common CMake Commands
+# ═══════════════════════════════════════════════════════════════════════════
+#
+# ┌────────────────────────────────────────────┬───────────────────────────────────────┐
+# │ Command                                    │ Purpose                               │
+# ├────────────────────────────────────────────┼───────────────────────────────────────┤
+# │ cmake_minimum_required(VERSION x.y)        │ Minimum CMake version                 │
+# │ project(name VERSION x.y LANGUAGES CXX)    │ Declare project                       │
+# │ add_executable(target src1.cpp src2.cpp)   │ Create executable target              │
+# │ add_library(target STATIC/SHARED src.cpp)  │ Create library target                 │
+# │ target_include_directories(t SCOPE dirs)   │ Add include paths                     │
+# │ target_link_libraries(t SCOPE libs)        │ Link to libraries                     │
+# │ target_compile_definitions(t SCOPE defs)   │ Add preprocessor defines              │
+# │ target_compile_options(t SCOPE flags)      │ Add compiler flags                    │
+# │ target_compile_features(t SCOPE features)  │ Require C++ standard features         │
+# │ find_package(Pkg REQUIRED)                 │ Find installed package                │
+# │ FetchContent_Declare(name ...)             │ Declare downloadable dependency       │
+# │ FetchContent_MakeAvailable(name)           │ Download and add to build             │
+# │ install(TARGETS/FILES/DIRECTORY ...)       │ Install rules for packaging           │
+# │ enable_testing() + add_test(...)           │ Enable CTest                          │
+# │ include(GoogleTest)                        │ GoogleTest integration                │
+# │ gtest_discover_tests(target)               │ Auto-register tests                   │
+# └────────────────────────────────────────────┴───────────────────────────────────────┘
